@@ -87,8 +87,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="qds-s8-mfY" kind="relationship" relationship="viewControllers" id="Vh4-kM-O2q"/>
-                        <segue destination="ggc-yC-U4p" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="wTl-i6-Dif" kind="relationship" relationship="viewControllers" id="55O-pa-mMJ"/>
+                        <segue destination="ggc-yC-U4p" kind="relationship" relationship="viewControllers" id="23c-ig-W7n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -477,8 +477,8 @@
         <image name="s24354q" width="72" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5qZ-IN-2ne"/>
         <segue reference="rOZ-PK-3Ay"/>
         <segue reference="fT8-ZT-Bla"/>
+        <segue reference="Awl-St-RrT"/>
     </inferredMetricsTieBreakers>
 </document>
