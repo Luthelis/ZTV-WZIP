@@ -10,6 +10,9 @@
 @import AVKit;
 @import AVFoundation;
 
+
 @interface WZIPAVPlayerViewController : AVPlayerViewController
+
+@property (nonatomic, strong) NSDictionary *playlistDictionary;
 
 @end

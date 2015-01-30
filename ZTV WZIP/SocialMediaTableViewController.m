@@ -5,15 +5,23 @@
 //  Created by Timothy Transue on 11/3/14.
 //  Copyright (c) 2014 University of Akron. All rights reserved.
 //
-
+@import CoreData;
 #import "SocialMediaTableViewController.h"
 #import "FacebookViewController.h"
 
 @interface SocialMediaTableViewController ()
 
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
 @end
 
 @implementation SocialMediaTableViewController
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(provideManagedObjectContext:) name:@"Context" object:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)provideManagedObjectContext:(NSNotification *)notification
+{
+    self.context = [notification.userInfo objectForKey:@"Context"];
+    NSLog(@"Context provided");
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -47,7 +61,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return 9;
 }
 
 /*
@@ -130,7 +144,101 @@
             destination.title = @"WZIP Twitter";
 
         }
+        else if ([segue.identifier isEqualToString:@"aahFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/akronafterhours"];
+            destination.socialURL = socialURL;
+            destination.title = @"Akron After Hours";
+        }
+        else if ([segue.identifier isEqualToString:@"aahTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/akronaferhours"];
+            destination.socialURL = socialURL;
+            destination.title = @"Akron After Hours";
+        }
+        else if ([segue.identifier isEqualToString:@"goofFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/GoofingOff"];
+            destination.socialURL = socialURL;
+            destination.title = @"Goofing Off!";
+        }
+        else if ([segue.identifier isEqualToString:@"goofTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvgoofingoff"];
+            destination.socialURL = socialURL;
+            destination.title = @"Goofing Off!";
+        }
+        else if ([segue.identifier isEqualToString:@"lcaFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvLCA"];
+            destination.socialURL = socialURL;
+            destination.title = @"Lights, Camera, Akron!";
+        }
+        else if ([segue.identifier isEqualToString:@"lcaTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlca"];
+            destination.socialURL = socialURL;
+            destination.title = @"Lights, Camera, Akron!";
+        }
+        else if ([segue.identifier isEqualToString:@"sportsFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/TheZTVSportsReport"];
+            destination.socialURL = socialURL;
+            destination.title = @"Sports Report";
+        }
+        else if ([segue.identifier isEqualToString:@"sportsTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsports"];
+            destination.socialURL = socialURL;
+            destination.title = @"Sports Report";
+        }
+        else if ([segue.identifier isEqualToString:@"lowFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVLowdown"];
+            destination.socialURL = socialURL;
+            destination.title = @"Lowdown";
+        }
+        else if ([segue.identifier isEqualToString:@"lowTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/lowdownztv"];
+            destination.socialURL = socialURL;
+            destination.title = @"Lowdown";
+        }
+        else if ([segue.identifier isEqualToString:@"feedFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/thefeedztv"];
+            destination.socialURL = socialURL;
+            destination.title = @"The Feed";
+        }
+        else if ([segue.identifier isEqualToString:@"feedTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/thefeedztv"];
+            destination.socialURL = socialURL;
+            destination.title = @"The Feed";
+        }
+        else if ([segue.identifier isEqualToString:@"chicFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVsochic"];
+            destination.socialURL = socialURL;
+            destination.title = @"So Chic";
+        }
+        else if ([segue.identifier isEqualToString:@"chicTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsochic"];
+            destination.socialURL = socialURL;
+            destination.title = @"So Chic";
+        }
     }
+    /*else
+    {
+        UIStoryboard *instagramStoryboard = [UIStoryboard storyboardWithName:@"Instagram" bundle:[NSBundle mainBundle]];
+        [instagramStoryboard instantiateInitialViewController];
+    }*/
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

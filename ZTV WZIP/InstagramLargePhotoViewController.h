@@ -10,4 +10,7 @@
 
 @interface InstagramLargePhotoViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *instagramLargeImage;
+@property (weak, nonatomic) IBOutlet UILabel *captionText;
+
 @end

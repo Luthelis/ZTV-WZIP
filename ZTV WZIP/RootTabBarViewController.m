@@ -1,34 +1,45 @@
 //
-//  InstagramLargePhotoViewController.m
+//  RootTabBarViewController.m
 //  ZTV WZIP
 //
-//  Created by Timothy Transue on 11/6/14.
+//  Created by Timothy Transue on 11/24/14.
 //  Copyright (c) 2014 University of Akron. All rights reserved.
 //
 
-#import "InstagramLargePhotoViewController.h"
+#import "RootTabBarViewController.h"
 
-@interface InstagramLargePhotoViewController ()
+
+@interface RootTabBarViewController ()
 
 @end
 
-@implementation InstagramLargePhotoViewController
+@implementation RootTabBarViewController
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setManagedObjectContext:) name:@"Context Ready" object:nil];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)closeViewController:(UIBarButtonItem *)sender
+
+- (void)setManagedObjectContext:(NSNotification *)notification
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    self.context = [notification.userInfo objectForKey:@"Context"];
+    NSLog(@"Context in Tab Bar Controller");
 }
+
+
 
 /*
 #pragma mark - Navigation
@@ -39,5 +50,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

@@ -10,8 +10,19 @@
 @import UIKit;
 
 @interface Instagram (Photos)
-
+/*
 + (Instagram *)photoWithInstagramData:(NSDictionary *)instagramData
+                   withFullSizeImages:(NSArray *)images
                inManagedObjectContext:(NSManagedObjectContext *)context;
+
++ (void)instagramImage:(NSDictionary *)thumbnailData
+     withFullSizeImage:(NSArray *)images
+           takenOnDate:(NSArray *)date
+ withSessionIdentifier:(NSString *)identifier
+inManagedObjectContext:(NSManagedObjectContext *)context;
+*/
+
++ (Instagram *)instagramImage:(NSDictionary *)imageData
+inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

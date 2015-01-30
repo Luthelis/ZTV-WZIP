@@ -1,67 +1,45 @@
 //
-//  WZIPAVPlayerViewController.m
+//  WZIPViewController.m
 //  ZTV WZIP
 //
-//  Created by Timothy Transue on 11/3/14.
+//  Created by Timothy Transue on 11/26/14.
 //  Copyright (c) 2014 University of Akron. All rights reserved.
 //
 
-#import "WZIPAVPlayerViewController.h"
-@import MediaPlayer;
+#import "WZIPViewController.h"
 
-@interface WZIPAVPlayerViewController () <NSXMLParserDelegate>
+@interface WZIPViewController () <NSXMLParserDelegate>
 
-@property (nonatomic, strong) NSString *artist;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSURL *imageURL;
 
 @end
 
-@implementation WZIPAVPlayerViewController
+@implementation WZIPViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    AVAsset *asset = [AVAsset assetWithURL:[NSURL URLWithString:@"http://www.live365.com/play/wzip?now=51&tag=live365&auth=594e8e429ab0395a72e3d5169201e886-1422579873-wzip&membername=&session=1422551073-659445&rnd=0.3082329868339002"]];
-    //AVAsset *asset = [AVAsset assetWithURL:[NSURL URLWithString:@"http://www.live365.com/web/components/top/playlist.html?site=web&ads=1&size=125&station=wzip&tm=0.3618873665109277"]];
-    AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:asset];
-    AVMetadataItem *metaData = [item.asset.metadata firstObject];
-    [metaData loadValuesAsynchronouslyForKeys:@[AVMetadataCommonKeyTitle, AVMetadataCommonKeyArtist, AVMetadataCommonKeyAlbumName, AVMetadataCommonKeyArtwork] completionHandler:^{
-        NSError *error = nil;
-        if ([metaData statusOfValueForKey:AVMetadataCommonKeyTitle error:&error] == AVKeyValueStatusLoaded) {
-            NSString *title = [metaData stringValue];
-            NSLog(@"%@", title);
-        }
-        if ([metaData statusOfValueForKey:AVMetadataCommonKeyArtist error:&error] == AVKeyValueStatusLoaded) {
-            NSString *artist = [metaData stringValue];
-            NSLog(@"%@", artist);
-        }
-        if ([metaData statusOfValueForKey:AVMetadataCommonKeyArtwork error:&error]) {
-            //NSData *artwork = [metaData dataValue];
-        }
-        if ([metaData statusOfValueForKey:AVMetadataCommonKeyAlbumName error:&error]) {
-            NSString *album = [metaData stringValue];
-            NSLog(@"%@", album);
-        }
-    }];
-    self.player = [AVPlayer playerWithPlayerItem:item];
-    self.player.rate = 0.0;
-    self.player.allowsExternalPlayback = YES;
+
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    self.player.rate = 1.0;
+    [super viewWillAppear:animated];
+    [self buttonTextChanger];
 }
-
+- (AVPlayer *)player
+{
+    if (!_player) {
+        _player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:@"http://www.live365.com/play/wzip?now=36&tag=live365&auth=22bbbc3fe8781225fd4e52e73f9f6dc4-1415827314-wzip&membername=&session=1415798514-330098&rnd=0.6353352852165699"]];
+    }
+    return _player;
+}
 - (void)wzipAudioSession
 {
     AVAudioSession *wzip = [AVAudioSession sharedInstance];
     [wzip setCategory:AVAudioSessionCategoryPlayback error:nil];
     [wzip setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
 }
-
 - (NSDictionary *)playlistDictionary
 {
     long long currentMillisTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
@@ -81,12 +59,36 @@
     }
     return _playlistDictionary;
 }
-- (void)configureControlCenter
+- (BOOL)canBecomeFirstResponder
 {
-    //MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
-    //center.nowPlayingInfo = self.playlistDictionary;
+    [super canBecomeFirstResponder];
+    return YES;
 }
 
+- (void)buttonTextChanger
+{
+    if (self.player.rate == 0) {
+        self.playerButton.titleLabel.text = @"Listen live now via Live365.com";
+    }
+    else if (self.player.rate == 1.0)
+    {
+        self.playerButton.titleLabel.text = @"Pause the radio station";
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (IBAction)playRadio:(UIButton *)sender
+{
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    [self wzipAudioSession];
+    [self playOrStop];
+    //[self configureControlCenter];
+    
+}
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)receivedEvent {
     
@@ -96,6 +98,7 @@
                 
             case UIEventSubtypeRemoteControlTogglePlayPause:
                 [self playOrStop];
+                [self buttonTextChanger];
                 break;
                 
                 /*case UIEventSubtypeRemoteControlPreviousTrack:
@@ -145,19 +148,20 @@
     self.playlistDictionary = musicInfoDictionary;
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    
-}
-
-
 - (void)dealloc
 {
     [self resignFirstResponder];
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
 
+/*
+#pragma mark - Navigation
 
-
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

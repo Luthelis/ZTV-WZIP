@@ -9,7 +9,8 @@
 #import "FacebookViewController.h"
 //#import <FacebookSDK/FacebookSDK.h>
 //#import <Bolts/Bolts.h>
-//@import Social;
+@import Social;
+@import Accounts;
 
 @interface FacebookViewController ()
 
@@ -31,6 +32,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

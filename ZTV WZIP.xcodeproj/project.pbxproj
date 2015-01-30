@@ -7,17 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1C0BBD61A0BE5DD00CCF4D4 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0BBD51A0BE5DD00CCF4D4 /* Instagram.m */; };
+		E170B8671A604E1000C1253A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170B8661A604E1000C1253A /* Social.framework */; };
+		E170B8691A604E1700C1253A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170B8681A604E1700C1253A /* Accounts.framework */; };
 		E1C0BBD81A0D4CB100CCF4D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */; };
 		E1DBD3561A0AB9C800B4A9ED /* ZTVShowsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */; };
 		E1DBD3591A0AB9E300B4A9ED /* ZTVYouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD3581A0AB9E300B4A9ED /* ZTVYouTubeViewController.m */; };
-		E1DBD35C1A0BC0A400B4A9ED /* InstagramCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD35B1A0BC0A400B4A9ED /* InstagramCollectionViewController.m */; };
-		E1DBD35F1A0BC17500B4A9ED /* InstagramLargePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD35E1A0BC17500B4A9ED /* InstagramLargePhotoViewController.m */; };
-		E1DBD3621A0BC24900B4A9ED /* InstagramDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD3611A0BC24900B4A9ED /* InstagramDownloader.m */; };
-		E1DBD36B1A0BDD8D00B4A9ED /* Instagram+Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD36A1A0BDD8D00B4A9ED /* Instagram+Photos.m */; };
 		E1DCDB301A07D60100C2834B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB2F1A07D60100C2834B /* main.m */; };
 		E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB321A07D60100C2834B /* AppDelegate.m */; };
-		E1DCDB361A07D60100C2834B /* ZTV_WZIP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB341A07D60100C2834B /* ZTV_WZIP.xcdatamodeld */; };
 		E1DCDB4D1A07D60200C2834B /* ZTV_WZIPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */; };
 		E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB561A07D66400C2834B /* Images.xcassets */; };
 		E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB581A07D68900C2834B /* LaunchScreen.xib */; };
@@ -28,9 +24,7 @@
 		E1DCDB651A07FC6F00C2834B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB641A07FC6F00C2834B /* AVFoundation.framework */; };
 		E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */; };
 		E1DCDB6D1A0836A200C2834B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */; };
-		E1DCDB8B1A0928DD00C2834B /* ZTVTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB8A1A0928DD00C2834B /* ZTVTwitterViewController.m */; };
-		E1DCDBA11A098CF600C2834B /* neoguiri_Radio.png in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDBA01A098CF600C2834B /* neoguiri_Radio.png */; };
-		E1DCDBA31A098D9400C2834B /* radioIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDBA21A098D9400C2834B /* radioIcon.png */; };
+		E1E700591A23D3200062FB66 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E700581A23D3200062FB66 /* RootTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,27 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1C0BBD41A0BE5DD00CCF4D4 /* Instagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instagram.h; path = ../Instagram.h; sourceTree = "<group>"; };
-		E1C0BBD51A0BE5DD00CCF4D4 /* Instagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Instagram.m; path = ../Instagram.m; sourceTree = "<group>"; };
+		E170B8661A604E1000C1253A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E170B8681A604E1700C1253A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTVShowsTableViewController.h; sourceTree = "<group>"; };
 		E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTVShowsTableViewController.m; sourceTree = "<group>"; };
 		E1DBD3571A0AB9E300B4A9ED /* ZTVYouTubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTVYouTubeViewController.h; sourceTree = "<group>"; };
 		E1DBD3581A0AB9E300B4A9ED /* ZTVYouTubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTVYouTubeViewController.m; sourceTree = "<group>"; };
-		E1DBD35A1A0BC0A400B4A9ED /* InstagramCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramCollectionViewController.h; sourceTree = "<group>"; };
-		E1DBD35B1A0BC0A400B4A9ED /* InstagramCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramCollectionViewController.m; sourceTree = "<group>"; };
-		E1DBD35D1A0BC17500B4A9ED /* InstagramLargePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLargePhotoViewController.h; sourceTree = "<group>"; };
-		E1DBD35E1A0BC17500B4A9ED /* InstagramLargePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLargePhotoViewController.m; sourceTree = "<group>"; };
-		E1DBD3601A0BC24900B4A9ED /* InstagramDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramDownloader.h; sourceTree = "<group>"; };
-		E1DBD3611A0BC24900B4A9ED /* InstagramDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramDownloader.m; sourceTree = "<group>"; };
-		E1DBD3691A0BDD8D00B4A9ED /* Instagram+Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Instagram+Photos.h"; sourceTree = "<group>"; };
-		E1DBD36A1A0BDD8D00B4A9ED /* Instagram+Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Instagram+Photos.m"; sourceTree = "<group>"; };
 		E1DCDB2A1A07D60100C2834B /* ZTV WZIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZTV WZIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DCDB2E1A07D60100C2834B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DCDB2F1A07D60100C2834B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1DCDB311A07D60100C2834B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1DCDB321A07D60100C2834B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1DCDB351A07D60100C2834B /* ZTV_WZIP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZTV_WZIP.xcdatamodel; sourceTree = "<group>"; };
 		E1DCDB461A07D60200C2834B /* ZTV WZIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZTV WZIPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DCDB4B1A07D60200C2834B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTV_WZIPTests.m; sourceTree = "<group>"; };
@@ -81,10 +66,8 @@
 		E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZIPAVPlayerViewController.m; sourceTree = "<group>"; };
 		E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E1DCDB6E1A0836A200C2834B /* ZTV WZIP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ZTV WZIP.entitlements"; sourceTree = "<group>"; };
-		E1DCDB891A0928DD00C2834B /* ZTVTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTVTwitterViewController.h; sourceTree = "<group>"; };
-		E1DCDB8A1A0928DD00C2834B /* ZTVTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTVTwitterViewController.m; sourceTree = "<group>"; };
-		E1DCDBA01A098CF600C2834B /* neoguiri_Radio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neoguiri_Radio.png; sourceTree = "<group>"; };
-		E1DCDBA21A098D9400C2834B /* radioIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioIcon.png; sourceTree = "<group>"; };
+		E1E700571A23D3200062FB66 /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		E1E700581A23D3200062FB66 /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E170B8691A604E1700C1253A /* Accounts.framework in Frameworks */,
+				E170B8671A604E1000C1253A /* Social.framework in Frameworks */,
 				E1C0BBD81A0D4CB100CCF4D4 /* MediaPlayer.framework in Frameworks */,
 				E1DCDB651A07FC6F00C2834B /* AVFoundation.framework in Frameworks */,
 				E1DCDB631A07FC6A00C2834B /* AVKit.framework in Frameworks */,
@@ -112,6 +97,8 @@
 		E1DCDB211A07D60100C2834B = {
 			isa = PBXGroup;
 			children = (
+				E170B8681A604E1700C1253A /* Accounts.framework */,
+				E170B8661A604E1000C1253A /* Social.framework */,
 				E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */,
 				E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */,
 				E1DCDB641A07FC6F00C2834B /* AVFoundation.framework */,
@@ -134,31 +121,18 @@
 		E1DCDB2C1A07D60100C2834B /* ZTV WZIP */ = {
 			isa = PBXGroup;
 			children = (
-				E1C0BBD41A0BE5DD00CCF4D4 /* Instagram.h */,
-				E1C0BBD51A0BE5DD00CCF4D4 /* Instagram.m */,
 				E1DCDB6E1A0836A200C2834B /* ZTV WZIP.entitlements */,
 				E1DCDB311A07D60100C2834B /* AppDelegate.h */,
 				E1DCDB321A07D60100C2834B /* AppDelegate.m */,
 				E1DCDB561A07D66400C2834B /* Images.xcassets */,
-				E1DCDB341A07D60100C2834B /* ZTV_WZIP.xcdatamodeld */,
-				E1DBD3691A0BDD8D00B4A9ED /* Instagram+Photos.h */,
-				E1DBD36A1A0BDD8D00B4A9ED /* Instagram+Photos.m */,
-				E1DBD35A1A0BC0A400B4A9ED /* InstagramCollectionViewController.h */,
-				E1DBD35B1A0BC0A400B4A9ED /* InstagramCollectionViewController.m */,
-				E1DBD3601A0BC24900B4A9ED /* InstagramDownloader.h */,
-				E1DBD3611A0BC24900B4A9ED /* InstagramDownloader.m */,
 				E1DCDB581A07D68900C2834B /* LaunchScreen.xib */,
 				E1DCDB591A07D68900C2834B /* Main.storyboard */,
-				E1DBD35D1A0BC17500B4A9ED /* InstagramLargePhotoViewController.h */,
-				E1DBD35E1A0BC17500B4A9ED /* InstagramLargePhotoViewController.m */,
+				E1E700571A23D3200062FB66 /* RootTabBarViewController.h */,
+				E1E700581A23D3200062FB66 /* RootTabBarViewController.m */,
 				E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */,
 				E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */,
 				E1DBD3571A0AB9E300B4A9ED /* ZTVYouTubeViewController.h */,
 				E1DBD3581A0AB9E300B4A9ED /* ZTVYouTubeViewController.m */,
-				E1DCDBA21A098D9400C2834B /* radioIcon.png */,
-				E1DCDBA01A098CF600C2834B /* neoguiri_Radio.png */,
-				E1DCDB891A0928DD00C2834B /* ZTVTwitterViewController.h */,
-				E1DCDB8A1A0928DD00C2834B /* ZTVTwitterViewController.m */,
 				E1DCDB661A08059500C2834B /* WZIPAVPlayerViewController.h */,
 				E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */,
 				E1DCDB5F1A07D97400C2834B /* SocialMediaTableViewController.h */,
@@ -285,9 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DCDBA31A098D9400C2834B /* radioIcon.png in Resources */,
 				E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */,
-				E1DCDBA11A098CF600C2834B /* neoguiri_Radio.png in Resources */,
 				E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */,
 				E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */,
 			);
@@ -307,18 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DBD35F1A0BC17500B4A9ED /* InstagramLargePhotoViewController.m in Sources */,
-				E1DCDB8B1A0928DD00C2834B /* ZTVTwitterViewController.m in Sources */,
 				E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */,
 				E1DCDB611A07D97400C2834B /* SocialMediaTableViewController.m in Sources */,
-				E1C0BBD61A0BE5DD00CCF4D4 /* Instagram.m in Sources */,
-				E1DBD36B1A0BDD8D00B4A9ED /* Instagram+Photos.m in Sources */,
 				E1DCDB5E1A07D6B500C2834B /* FacebookViewController.m in Sources */,
-				E1DCDB361A07D60100C2834B /* ZTV_WZIP.xcdatamodeld in Sources */,
 				E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */,
 				E1DCDB301A07D60100C2834B /* main.m in Sources */,
-				E1DBD35C1A0BC0A400B4A9ED /* InstagramCollectionViewController.m in Sources */,
-				E1DBD3621A0BC24900B4A9ED /* InstagramDownloader.m in Sources */,
+				E1E700591A23D3200062FB66 /* RootTabBarViewController.m in Sources */,
 				E1DBD3591A0AB9E300B4A9ED /* ZTVYouTubeViewController.m in Sources */,
 				E1DBD3561A0AB9C800B4A9ED /* ZTVShowsTableViewController.m in Sources */,
 			);
@@ -377,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -413,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,9 +399,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ZTV WZIP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -451,9 +419,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ZTV WZIP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -522,19 +492,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E1DCDB341A07D60100C2834B /* ZTV_WZIP.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E1DCDB351A07D60100C2834B /* ZTV_WZIP.xcdatamodel */,
-			);
-			currentVersion = E1DCDB351A07D60100C2834B /* ZTV_WZIP.xcdatamodel */;
-			path = ZTV_WZIP.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E1DCDB221A07D60100C2834B /* Project object */;
 }
