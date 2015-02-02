@@ -51,7 +51,7 @@
 }
 
 #pragma mark - Table view data source
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -61,9 +61,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 9;
+    return 7;
 }
-
+*/
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
@@ -203,30 +203,6 @@
             socialURL = [NSURL URLWithString:@"https://twitter.com/lowdownztv"];
             destination.socialURL = socialURL;
             destination.title = @"Lowdown";
-        }
-        else if ([segue.identifier isEqualToString:@"feedFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/thefeedztv"];
-            destination.socialURL = socialURL;
-            destination.title = @"The Feed";
-        }
-        else if ([segue.identifier isEqualToString:@"feedTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/thefeedztv"];
-            destination.socialURL = socialURL;
-            destination.title = @"The Feed";
-        }
-        else if ([segue.identifier isEqualToString:@"chicFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVsochic"];
-            destination.socialURL = socialURL;
-            destination.title = @"So Chic";
-        }
-        else if ([segue.identifier isEqualToString:@"chicTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsochic"];
-            destination.socialURL = socialURL;
-            destination.title = @"So Chic";
         }
     }
     /*else
