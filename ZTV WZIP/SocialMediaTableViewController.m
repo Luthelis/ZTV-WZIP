@@ -204,6 +204,18 @@
             destination.socialURL = socialURL;
             destination.title = @"Lowdown";
         }
+        else if ([segue.identifier isEqualToString:@"undergradzFB"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
+            destination.socialURL = socialURL;
+            destination.title = @"Undergradz";
+        }
+        else if ([segue.identifier isEqualToString:@"undergradzTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvundergradz"];
+            destination.socialURL = socialURL;
+            destination.title = @"Undergradz";
+        }
     }
     /*else
     {

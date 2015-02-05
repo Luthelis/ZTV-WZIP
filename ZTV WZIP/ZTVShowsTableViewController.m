@@ -127,6 +127,10 @@
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCPHbqRYdXcPFA9BocjQPusw"];
              }
+             else if ([segue.identifier isEqualToString:@"undergradz"])
+             {
+                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
+             }
              else youtubeURL = nil;
              NSURLRequest *youtubeRequest = [NSURLRequest requestWithURL:youtubeURL];
              destination.youtubeURLRequest = youtubeRequest;
