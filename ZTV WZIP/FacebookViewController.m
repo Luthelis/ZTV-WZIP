@@ -22,6 +22,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // The next two lines load the social media URL provided by the previous view controller
     NSURLRequest *socialRequest = [NSURLRequest requestWithURL:self.socialURL];
     [self.facebookWebView loadRequest:socialRequest];
     //self.tabBarController.tabBar.hidden = YES;

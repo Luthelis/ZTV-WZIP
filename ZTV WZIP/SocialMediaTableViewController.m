@@ -20,6 +20,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    // This is not necessary in this version
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(provideManagedObjectContext:) name:@"Context" object:nil];
 }
 
@@ -46,6 +47,7 @@
 
 - (void)provideManagedObjectContext:(NSNotification *)notification
 {
+    // This method is not used in this version.  Also related to the Managed Object Context
     self.context = [notification.userInfo objectForKey:@"Context"];
     NSLog(@"Context provided");
 }
@@ -116,6 +118,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     NSURL *socialURL;
+    // The following code determines which social media link was selected and provides the proper URL to the destination view controller
     if ([[segue destinationViewController] isKindOfClass:[FacebookViewController class]])
     {
         FacebookViewController *destination = [segue destinationViewController];
@@ -226,6 +229,7 @@
 
 - (void)dealloc
 {
+    // The following line is necessary to remove the view controller from the notification center.  Will break without this line involved.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

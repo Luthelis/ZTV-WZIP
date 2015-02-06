@@ -10,6 +10,7 @@
 
 @interface ZTVYouTubeViewController : UIViewController
 
+// Gets the URL Request from it's previous controller
 @property (strong, nonatomic) NSURLRequest *youtubeURLRequest;
 
 @end

@@ -31,6 +31,7 @@
 }
 
 #pragma mark - Table view data source
+// Section is commented out due to using static cells
 /*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
@@ -99,6 +100,7 @@
          {
              ZTVYouTubeViewController *destination = [segue destinationViewController];
              NSURL *youtubeURL;
+             // Identify which show was selected and pass the proper YouTube URL
              if ([segue.identifier isEqualToString:@"akronAfterHours"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVAkronAfterHours"];
@@ -132,6 +134,7 @@
                  youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
              }
              else youtubeURL = nil;
+             // Send the proper URL Request to the destination view controller
              NSURLRequest *youtubeRequest = [NSURLRequest requestWithURL:youtubeURL];
              destination.youtubeURLRequest = youtubeRequest;
          }

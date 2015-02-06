@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self instagramPhotoDatabase];
+    //[self instagramPhotoDatabase]; //To be implemented in a later version
     return YES;
 }
 
@@ -52,7 +52,8 @@
 {
     
 }
-
+//  To be implemented in a later version
+/*
 - (BOOL)instagramPhotoDatabase
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -81,7 +82,7 @@
     return YES;
 }
 
-/*
+
  - (void)startInstagramDownload:(UIManagedDocument *)document
 {
     if (document.documentState == UIDocumentStateNormal)
@@ -103,6 +104,6 @@
         }];
     }
 }
+
 */
-    
 @end

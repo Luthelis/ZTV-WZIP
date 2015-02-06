@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Sets the web view to the proper YouTube page
     [self.youtubeWebView loadRequest:self.youtubeURLRequest];
 }
 

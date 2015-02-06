@@ -24,7 +24,6 @@
 		E1DCDB651A07FC6F00C2834B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB641A07FC6F00C2834B /* AVFoundation.framework */; };
 		E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */; };
 		E1DCDB6D1A0836A200C2834B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */; };
-		E1E700591A23D3200062FB66 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E700581A23D3200062FB66 /* RootTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +65,6 @@
 		E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZIPAVPlayerViewController.m; sourceTree = "<group>"; };
 		E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E1DCDB6E1A0836A200C2834B /* ZTV WZIP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ZTV WZIP.entitlements"; sourceTree = "<group>"; };
-		E1E700571A23D3200062FB66 /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
-		E1E700581A23D3200062FB66 /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +124,6 @@
 				E1DCDB561A07D66400C2834B /* Images.xcassets */,
 				E1DCDB581A07D68900C2834B /* LaunchScreen.xib */,
 				E1DCDB591A07D68900C2834B /* Main.storyboard */,
-				E1E700571A23D3200062FB66 /* RootTabBarViewController.h */,
-				E1E700581A23D3200062FB66 /* RootTabBarViewController.m */,
 				E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */,
 				E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */,
 				E1DBD3571A0AB9E300B4A9ED /* ZTVYouTubeViewController.h */,
@@ -284,7 +279,6 @@
 				E1DCDB5E1A07D6B500C2834B /* FacebookViewController.m in Sources */,
 				E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */,
 				E1DCDB301A07D60100C2834B /* main.m in Sources */,
-				E1E700591A23D3200062FB66 /* RootTabBarViewController.m in Sources */,
 				E1DBD3591A0AB9E300B4A9ED /* ZTVYouTubeViewController.m in Sources */,
 				E1DBD3561A0AB9C800B4A9ED /* ZTVShowsTableViewController.m in Sources */,
 			);
