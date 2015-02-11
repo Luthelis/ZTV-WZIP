@@ -38,8 +38,6 @@
 		E1DCDB2F1A07D60100C2834B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1DCDB311A07D60100C2834B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1DCDB321A07D60100C2834B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1DCDB4B1A07D60200C2834B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTV_WZIPTests.m; sourceTree = "<group>"; };
 		E1DCDB561A07D66400C2834B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1DCDB581A07D68900C2834B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E1DCDB591A07D68900C2834B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				E1DCDB641A07FC6F00C2834B /* AVFoundation.framework */,
 				E1DCDB621A07FC6A00C2834B /* AVKit.framework */,
 				E1DCDB2C1A07D60100C2834B /* ZTV WZIP */,
-				E1DCDB491A07D60200C2834B /* ZTV WZIPTests */,
 				E1DCDB2B1A07D60100C2834B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,23 +121,6 @@
 			children = (
 				E1DCDB2E1A07D60100C2834B /* Info.plist */,
 				E1DCDB2F1A07D60100C2834B /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E1DCDB491A07D60200C2834B /* ZTV WZIPTests */ = {
-			isa = PBXGroup;
-			children = (
-				E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */,
-				E1DCDB4A1A07D60200C2834B /* Supporting Files */,
-			);
-			path = "ZTV WZIPTests";
-			sourceTree = "<group>";
-		};
-		E1DCDB4A1A07D60200C2834B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E1DCDB4B1A07D60200C2834B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
