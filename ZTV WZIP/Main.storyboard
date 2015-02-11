@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
     </dependencies>
     <scenes>
         <!--WZIP-->
@@ -149,7 +149,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OID-Mj-DB0" id="uqC-Kq-7PC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LCA-Logo-thumb-keyable" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-R6-2jW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lca cover" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-R6-2jW">
                                                     <rect key="frame" x="0.0" y="2" width="102" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lights, Camera, Akron!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVT-pF-hEx">
@@ -691,12 +691,12 @@
     <resources>
         <image name="AAH-logo-thumb-keyable" width="75" height="47"/>
         <image name="Goofing-Off-Logo-thumb-keyable" width="75" height="47"/>
-        <image name="LCA-Logo-thumb-keyable" width="75" height="42"/>
         <image name="Social Media - Facebook" width="24" height="24"/>
         <image name="Speaker" width="24" height="24"/>
         <image name="Sports-Report-Logo-thumb" width="75" height="42"/>
         <image name="TV" width="24" height="24"/>
         <image name="The Fee" width="120" height="120"/>
+        <image name="lca cover" width="480" height="268"/>
         <image name="logo" width="1280" height="720"/>
         <image name="mq1" width="120" height="120"/>
         <image name="neoguiri_Radio" width="300" height="300"/>
