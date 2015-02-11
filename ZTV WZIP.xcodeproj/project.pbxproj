@@ -14,7 +14,6 @@
 		E1DBD3591A0AB9E300B4A9ED /* ZTVYouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DBD3581A0AB9E300B4A9ED /* ZTVYouTubeViewController.m */; };
 		E1DCDB301A07D60100C2834B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB2F1A07D60100C2834B /* main.m */; };
 		E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB321A07D60100C2834B /* AppDelegate.m */; };
-		E1DCDB4D1A07D60200C2834B /* ZTV_WZIPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */; };
 		E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB561A07D66400C2834B /* Images.xcassets */; };
 		E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB581A07D68900C2834B /* LaunchScreen.xib */; };
 		E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB591A07D68900C2834B /* Main.storyboard */; };
@@ -25,16 +24,6 @@
 		E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */; };
 		E1DCDB6D1A0836A200C2834B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB6C1A0836A200C2834B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E1DCDB471A07D60200C2834B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1DCDB221A07D60100C2834B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1DCDB291A07D60100C2834B;
-			remoteInfo = "ZTV WZIP";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E170B8661A604E1000C1253A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -49,7 +38,6 @@
 		E1DCDB2F1A07D60100C2834B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1DCDB311A07D60100C2834B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1DCDB321A07D60100C2834B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1DCDB461A07D60200C2834B /* ZTV WZIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZTV WZIPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DCDB4B1A07D60200C2834B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DCDB4C1A07D60200C2834B /* ZTV_WZIPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTV_WZIPTests.m; sourceTree = "<group>"; };
 		E1DCDB561A07D66400C2834B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -81,13 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1DCDB431A07D60200C2834B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				E1DCDB2A1A07D60100C2834B /* ZTV WZIP.app */,
-				E1DCDB461A07D60200C2834B /* ZTV WZIPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,24 +165,6 @@
 			productReference = E1DCDB2A1A07D60100C2834B /* ZTV WZIP.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E1DCDB451A07D60200C2834B /* ZTV WZIPTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1DCDB531A07D60200C2834B /* Build configuration list for PBXNativeTarget "ZTV WZIPTests" */;
-			buildPhases = (
-				E1DCDB421A07D60200C2834B /* Sources */,
-				E1DCDB431A07D60200C2834B /* Frameworks */,
-				E1DCDB441A07D60200C2834B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1DCDB481A07D60200C2834B /* PBXTargetDependency */,
-			);
-			name = "ZTV WZIPTests";
-			productName = "ZTV WZIPTests";
-			productReference = E1DCDB461A07D60200C2834B /* ZTV WZIPTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,10 +186,6 @@
 							};
 						};
 					};
-					E1DCDB451A07D60200C2834B = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = E1DCDB291A07D60100C2834B;
-					};
 				};
 			};
 			buildConfigurationList = E1DCDB251A07D60100C2834B /* Build configuration list for PBXProject "ZTV WZIP" */;
@@ -244,7 +202,6 @@
 			projectRoot = "";
 			targets = (
 				E1DCDB291A07D60100C2834B /* ZTV WZIP */,
-				E1DCDB451A07D60200C2834B /* ZTV WZIPTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,13 +214,6 @@
 				E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */,
 				E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */,
 				E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1DCDB441A07D60200C2834B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,23 +234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1DCDB421A07D60200C2834B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1DCDB4D1A07D60200C2834B /* ZTV_WZIPTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E1DCDB481A07D60200C2834B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1DCDB291A07D60100C2834B /* ZTV WZIP */;
-			targetProxy = E1DCDB471A07D60200C2834B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E1DCDB4E1A07D60200C2834B /* Debug */ = {
@@ -421,40 +355,6 @@
 			};
 			name = Release;
 		};
-		E1DCDB541A07D60200C2834B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ZTV WZIPTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZTV WZIP.app/ZTV WZIP";
-			};
-			name = Debug;
-		};
-		E1DCDB551A07D60200C2834B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ZTV WZIPTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZTV WZIP.app/ZTV WZIP";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,15 +372,6 @@
 			buildConfigurations = (
 				E1DCDB511A07D60200C2834B /* Debug */,
 				E1DCDB521A07D60200C2834B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1DCDB531A07D60200C2834B /* Build configuration list for PBXNativeTarget "ZTV WZIPTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1DCDB541A07D60200C2834B /* Debug */,
-				E1DCDB551A07D60200C2834B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

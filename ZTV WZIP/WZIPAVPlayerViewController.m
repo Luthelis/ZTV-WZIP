@@ -12,7 +12,7 @@
 @interface WZIPAVPlayerViewController () <NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSString *artist;
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *songTitle;
 @property (nonatomic, strong) NSURL *imageURL;
 
 @end
