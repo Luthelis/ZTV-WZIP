@@ -19,9 +19,17 @@
 
 @implementation WZIPAVPlayerViewController
 
+// Below method allows for the view controller to assume First Responder status
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Establish that this is the first responder
+    [self becomeFirstResponder];
     
     // Get the AV Asset from the web
     AVAsset *asset = [AVAsset assetWithURL:[NSURL URLWithString:@"http://www.live365.com/play/wzip?now=51&tag=live365&auth=594e8e429ab0395a72e3d5169201e886-1422579873-wzip&membername=&session=1422551073-659445&rnd=0.3082329868339002"]];
@@ -48,7 +56,8 @@
             NSLog(@"%@", album);
         }
     }];
-    
+    // Run the background audio session
+    [self wzipAudioSession];
     // Give the player the asset
     self.player = [AVPlayer playerWithPlayerItem:item];
     // Pause the player until later
