@@ -7,6 +7,7 @@
 //
 
 #import "ZTVYouTubeViewController.h"
+@import AVFoundation;
 
 @interface ZTVYouTubeViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *youtubeWebView;
@@ -20,8 +21,16 @@
     // Do any additional setup after loading the view.
     // Sets the web view to the proper YouTube page
     [self.youtubeWebView loadRequest:self.youtubeURLRequest];
+    AVAudioSession *wzip = [AVAudioSession sharedInstance];
+    [wzip setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [wzip setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
+    [self becomeFirstResponder];
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,5 +45,9 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self resignFirstResponder];
+}
 @end
