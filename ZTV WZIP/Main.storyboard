@@ -121,7 +121,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="akronAfterHours" id="T71-eu-ASJ"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="akronAfterHours" id="T71-eu-ASJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="Uu2-66-GRg">
@@ -141,7 +141,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="goofingOff" id="mZ7-7R-wHW"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="goofingOff" id="mZ7-7R-wHW"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="OID-Mj-DB0">
@@ -161,7 +161,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="lightsCameraAkron" id="2h7-bf-Ord"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="lightsCameraAkron" id="2h7-bf-Ord"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="jUC-80-fvo">
@@ -181,7 +181,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="sportsReport" id="xuP-it-M6f"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="sportsReport" id="xuP-it-M6f"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="kuC-eb-z9W">
@@ -201,7 +201,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="lowdown" id="RBU-n7-eoY"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="lowdown" id="RBU-n7-eoY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="zcO-Om-PV8">
@@ -221,7 +221,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="undergradz" id="TBr-Np-IWO"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="undergradz" id="TBr-Np-IWO"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -245,7 +245,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="theFeed" id="fT8-ZT-Bla"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="theFeed" id="fT8-ZT-Bla"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="59" id="WlE-sL-SYd">
@@ -265,7 +265,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ldw-J8-ByO" kind="show" identifier="soChic" id="JZ4-Mi-RPE"/>
+                                            <segue destination="ldw-J8-ByO" kind="presentation" identifier="soChic" id="JZ4-Mi-RPE"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -295,25 +295,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-CH-rvL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byy-xY-hoq">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="previous" width="26" id="Cz2-oY-BdX">
+                                        <connections>
+                                            <action selector="backButton:" destination="ldw-J8-ByO" id="KCc-lN-0mi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="next" width="33" id="t4L-9y-k0a">
+                                        <connections>
+                                            <action selector="forwardButton:" destination="ldw-J8-ByO" id="wVp-e3-2XI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c5D-rG-ANr"/>
+                                    <barButtonItem title="Close" id="vdI-8E-5sw">
+                                        <connections>
+                                            <action selector="closeWindow:" destination="ldw-J8-ByO" id="WbQ-iw-1uk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg6-XY-WpU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="aH5-gE-5Aa"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KVd-CH-rvL" firstAttribute="top" secondItem="Go6-1a-YlG" secondAttribute="top" id="M4x-9x-hMC"/>
-                            <constraint firstAttribute="trailing" secondItem="KVd-CH-rvL" secondAttribute="trailing" id="PJA-fe-gzd"/>
-                            <constraint firstItem="KVd-CH-rvL" firstAttribute="leading" secondItem="Go6-1a-YlG" secondAttribute="leading" id="Wde-g8-EC7"/>
-                            <constraint firstAttribute="bottom" secondItem="KVd-CH-rvL" secondAttribute="bottom" id="ag5-2n-AAw"/>
+                            <constraint firstItem="byy-xY-hoq" firstAttribute="top" secondItem="KVd-CH-rvL" secondAttribute="bottom" id="9hW-tU-CUm"/>
+                            <constraint firstItem="KVd-CH-rvL" firstAttribute="trailing" secondItem="byy-xY-hoq" secondAttribute="trailing" id="NTY-72-stM"/>
+                            <constraint firstItem="byy-xY-hoq" firstAttribute="bottom" secondItem="QED-df-Q8v" secondAttribute="top" id="P5w-R6-GxM"/>
+                            <constraint firstItem="byy-xY-hoq" firstAttribute="leading" secondItem="Go6-1a-YlG" secondAttribute="leading" id="Tcj-II-Qou"/>
+                            <constraint firstItem="cg6-XY-WpU" firstAttribute="top" secondItem="Go6-1a-YlG" secondAttribute="top" id="YVG-QT-nrI"/>
+                            <constraint firstItem="KVd-CH-rvL" firstAttribute="leading" secondItem="byy-xY-hoq" secondAttribute="leading" id="ZKw-Fh-qBg"/>
+                            <constraint firstItem="cg6-XY-WpU" firstAttribute="leading" secondItem="KVd-CH-rvL" secondAttribute="leading" id="d5T-HL-lYn"/>
+                            <constraint firstItem="KVd-CH-rvL" firstAttribute="top" secondItem="cg6-XY-WpU" secondAttribute="bottom" id="pov-go-lGR"/>
+                            <constraint firstAttribute="trailing" secondItem="KVd-CH-rvL" secondAttribute="trailing" id="qdq-cw-0aV"/>
+                            <constraint firstItem="cg6-XY-WpU" firstAttribute="trailing" secondItem="KVd-CH-rvL" secondAttribute="trailing" id="uxY-dH-wHc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="titleBar" destination="cg6-XY-WpU" id="oCp-Fd-5da"/>
                         <outlet property="youtubeWebView" destination="KVd-CH-rvL" id="2XA-ro-if6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv3-Zq-UFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351" y="-332"/>
+            <point key="canvasLocation" x="2354" y="-322"/>
         </scene>
         <!--Social-->
         <scene sceneID="QbF-Vd-V37">
@@ -359,7 +393,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="ztvFacebook" id="tzM-6z-IZP"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="ztvFacebook" id="tzM-6z-IZP"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nnj-Ix-9Mr" style="IBUITableViewCellStyleDefault" id="gPY-Ma-9tc">
@@ -376,7 +410,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="wzipFacebook" id="ez6-iv-Sn6"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="wzipFacebook" id="ez6-iv-Sn6"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oTK-Al-J8T" style="IBUITableViewCellStyleDefault" id="F47-Dn-fXD">
@@ -393,7 +427,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="aahFacebook" id="cct-Ax-J8I"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="aahFacebook" id="cct-Ax-J8I"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="EkU-1I-3L0" style="IBUITableViewCellStyleDefault" id="Btn-8Q-vqA">
@@ -410,7 +444,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="goofFacebook" id="em7-gJ-YFS"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="goofFacebook" id="em7-gJ-YFS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="58L-m2-CEZ" style="IBUITableViewCellStyleDefault" id="bhN-Zo-dni">
@@ -427,7 +461,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="lcaFacebook" id="chE-0Z-gjA"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="lcaFacebook" id="chE-0Z-gjA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cgz-5I-DFI" style="IBUITableViewCellStyleDefault" id="aKF-uJ-KWz">
@@ -444,7 +478,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="lowFacebook" id="usK-Lb-rFY"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="lowFacebook" id="usK-Lb-rFY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="B18-M0-ohH" style="IBUITableViewCellStyleDefault" id="PNk-dc-11d">
@@ -461,7 +495,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="sportsFacebook" id="ZfV-Sg-nhA"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="sportsFacebook" id="ZfV-Sg-nhA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="VRP-ow-nsk" style="IBUITableViewCellStyleDefault" id="rVH-34-DQk">
@@ -478,7 +512,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="undergradzFB" id="cvJ-Pu-93T"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="undergradzFB" id="cvJ-Pu-93T"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -499,7 +533,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="ztvTwitter" id="jhV-x5-E9K"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="ztvTwitter" id="jhV-x5-E9K"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4gL-2C-F32" style="IBUITableViewCellStyleDefault" id="RyQ-Km-MmA">
@@ -516,7 +550,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="wzipTwitter" id="CiC-YU-XME"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="wzipTwitter" id="CiC-YU-XME"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wag-ka-YKJ" style="IBUITableViewCellStyleDefault" id="AbY-sC-Ve1">
@@ -533,7 +567,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="aahTwitter" id="P2s-7c-iSy"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="aahTwitter" id="P2s-7c-iSy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yPa-ZZ-atL" style="IBUITableViewCellStyleDefault" id="Vut-31-cnC">
@@ -550,7 +584,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="goofTwitter" id="ELe-Wq-Piz"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="goofTwitter" id="ELe-Wq-Piz"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bvf-Fr-TSP" style="IBUITableViewCellStyleDefault" id="4HC-vV-shU">
@@ -567,7 +601,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="lcaTwitter" id="7uC-kq-4LS"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="lcaTwitter" id="7uC-kq-4LS"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QqV-AQ-6OM" style="IBUITableViewCellStyleDefault" id="wdU-rF-Wxj">
@@ -584,7 +618,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="sportsTwitter" id="u7g-yB-PqL"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="sportsTwitter" id="u7g-yB-PqL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9Sv-5J-aHx" style="IBUITableViewCellStyleDefault" id="N8p-UE-EJf">
@@ -601,7 +635,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="lowTwitter" id="ZHF-pD-n8w"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="lowTwitter" id="ZHF-pD-n8w"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="SJr-gW-xqh" style="IBUITableViewCellStyleDefault" id="8JB-jQ-eX5">
@@ -618,7 +652,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OCl-Sg-KNR" kind="show" identifier="undergradzTwitter" id="hsH-tl-Jwg"/>
+                                            <segue destination="OCl-Sg-KNR" kind="presentation" identifier="undergradzTwitter" id="hsH-tl-Jwg"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -648,16 +682,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6S-c3-kR4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32m-0E-Rw3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="nsL-XV-0JG"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohq-0Q-maf">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="previous" width="26" id="XYG-eh-PS1">
+                                        <connections>
+                                            <action selector="backButton:" destination="OCl-Sg-KNR" id="Pt8-nf-6S8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="next" width="33" id="Hyb-A3-Ai9">
+                                        <connections>
+                                            <action selector="forwardButton:" destination="OCl-Sg-KNR" id="3Zc-iV-G16"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7tC-DB-zEg"/>
+                                    <barButtonItem title="Close" id="qRg-M4-nZ0">
+                                        <connections>
+                                            <action selector="closeButton:" destination="OCl-Sg-KNR" id="H9W-hv-Iob"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d6S-c3-kR4" firstAttribute="top" secondItem="kDZ-lX-V2H" secondAttribute="top" id="11S-fD-OKo"/>
-                            <constraint firstAttribute="bottom" secondItem="d6S-c3-kR4" secondAttribute="bottom" id="BLZ-c1-IOc"/>
-                            <constraint firstItem="d6S-c3-kR4" firstAttribute="leading" secondItem="kDZ-lX-V2H" secondAttribute="leading" id="CNV-na-Rsa"/>
-                            <constraint firstAttribute="trailing" secondItem="d6S-c3-kR4" secondAttribute="trailing" id="wOl-om-aBL"/>
+                            <constraint firstItem="d6S-c3-kR4" firstAttribute="trailing" secondItem="32m-0E-Rw3" secondAttribute="trailing" id="4Zj-rg-s6G"/>
+                            <constraint firstItem="d6S-c3-kR4" firstAttribute="leading" secondItem="Ohq-0Q-maf" secondAttribute="leading" id="Nah-mR-vS0"/>
+                            <constraint firstItem="32m-0E-Rw3" firstAttribute="leading" secondItem="kDZ-lX-V2H" secondAttribute="leading" id="Uid-sQ-bcS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ohq-0Q-maf" secondAttribute="trailing" id="Zaf-0f-nVK"/>
+                            <constraint firstItem="Ohq-0Q-maf" firstAttribute="top" secondItem="d6S-c3-kR4" secondAttribute="bottom" id="lM9-NF-iVo"/>
+                            <constraint firstItem="32m-0E-Rw3" firstAttribute="top" secondItem="kDZ-lX-V2H" secondAttribute="top" id="nhM-vq-PrW"/>
+                            <constraint firstItem="d6S-c3-kR4" firstAttribute="top" secondItem="32m-0E-Rw3" secondAttribute="bottom" id="rMV-GF-jww"/>
+                            <constraint firstItem="d6S-c3-kR4" firstAttribute="trailing" secondItem="Ohq-0Q-maf" secondAttribute="trailing" id="rfe-lg-1UF"/>
+                            <constraint firstItem="Ohq-0Q-maf" firstAttribute="bottom" secondItem="vmu-59-Xb2" secondAttribute="top" id="smi-Q7-AYx"/>
+                            <constraint firstItem="32m-0E-Rw3" firstAttribute="leading" secondItem="d6S-c3-kR4" secondAttribute="leading" id="zjd-zc-zcg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -700,12 +767,14 @@
         <image name="logo" width="1280" height="720"/>
         <image name="mq1" width="120" height="120"/>
         <image name="neoguiri_Radio" width="300" height="300"/>
+        <image name="next" width="11" height="21"/>
+        <image name="previous" width="11" height="21"/>
         <image name="s24354q" width="72" height="72"/>
         <image name="undergradz" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hsH-tl-Jwg"/>
-        <segue reference="TBr-Np-IWO"/>
         <segue reference="JuT-v6-TBY"/>
+        <segue reference="hsH-tl-Jwg"/>
+        <segue reference="JZ4-Mi-RPE"/>
     </inferredMetricsTieBreakers>
 </document>

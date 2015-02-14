@@ -104,34 +104,42 @@
              if ([segue.identifier isEqualToString:@"akronAfterHours"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVAkronAfterHours"];
+                 destination.titleBar.topItem.title = @"Akron After Hours";
              }
              else if ([segue.identifier isEqualToString:@"goofingOff"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ztvgoofingoff"];
+                 destination.titleBar.topItem.title = @"Goofing Off!";
              }
              else if ([segue.identifier isEqualToString:@"lightsCameraAkron"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVLCA"];
+                 destination.titleBar.topItem.title = @"Lights, Camera, Akron!";
              }
              else if ([segue.identifier isEqualToString:@"sportsReport"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVsports"];
+                 destination.titleBar.topItem.title = @"ZTV Sports Report";
              }
              else if ([segue.identifier isEqualToString:@"lowdown"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ztvlowdown"];
+                 destination.titleBar.topItem.title = @"Lowdown";
              }
              else if ([segue.identifier isEqualToString:@"soChic"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCzAPLA1iIWVkqaoEN2FbRJg"];
+                 destination.titleBar.topItem.title = @"So Chic";
              }
              else if ([segue.identifier isEqualToString:@"theFeed"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCPHbqRYdXcPFA9BocjQPusw"];
+                 destination.titleBar.topItem.title = @"ZTV The Feed";
              }
              else if ([segue.identifier isEqualToString:@"undergradz"])
              {
                  youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
+                 destination.titleBar.topItem.title = @"Undergradz";
              }
              else youtubeURL = nil;
              // Send the proper URL Request to the destination view controller

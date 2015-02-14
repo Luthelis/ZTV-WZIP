@@ -34,7 +34,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backButton:(UIBarButtonItem *)sender
+{
+    [self.facebookWebView goBack];
+}
 
+- (IBAction)forwardButton:(id)sender
+{
+    [self.facebookWebView goForward];
+}
+- (IBAction)closeButton:(UIBarButtonItem *)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 
 /*
 #pragma mark - Navigation
