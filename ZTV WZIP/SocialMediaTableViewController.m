@@ -155,7 +155,7 @@
         }
         else if ([segue.identifier isEqualToString:@"aahTwitter"])
         {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/akronaferhours"];
+            socialURL = [NSURL URLWithString:@"https://twitter.com/akronafterhours"];
             destination.socialURL = socialURL;
             destination.title = @"Akron After Hours";
         }
@@ -203,7 +203,7 @@
         }
         else if ([segue.identifier isEqualToString:@"lowTwitter"])
         {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/lowdownztv"];
+            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlowdown"];
             destination.socialURL = socialURL;
             destination.title = @"Lowdown";
         }
