@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E117E17E1AA0FE95004AF818 /* WZIPMediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E117E17D1AA0FE95004AF818 /* WZIPMediaTableViewController.m */; };
+		E117E1811AA0FF2E004AF818 /* WZIPMediaWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E117E1801AA0FF2E004AF818 /* WZIPMediaWebViewController.m */; };
+		E117E1831AA12F68004AF818 /* s24354q.png in Resources */ = {isa = PBXBuildFile; fileRef = E117E1821AA12F67004AF818 /* s24354q.png */; };
 		E170B8671A604E1000C1253A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170B8661A604E1000C1253A /* Social.framework */; };
 		E170B8691A604E1700C1253A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E170B8681A604E1700C1253A /* Accounts.framework */; };
 		E1C0BBD81A0D4CB100CCF4D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */; };
@@ -26,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E117E17C1AA0FE95004AF818 /* WZIPMediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZIPMediaTableViewController.h; sourceTree = "<group>"; };
+		E117E17D1AA0FE95004AF818 /* WZIPMediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZIPMediaTableViewController.m; sourceTree = "<group>"; };
+		E117E17F1AA0FF2E004AF818 /* WZIPMediaWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZIPMediaWebViewController.h; sourceTree = "<group>"; };
+		E117E1801AA0FF2E004AF818 /* WZIPMediaWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZIPMediaWebViewController.m; sourceTree = "<group>"; };
+		E117E1821AA12F67004AF818 /* s24354q.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = s24354q.png; path = Images.xcassets/s24354q.imageset/s24354q.png; sourceTree = "<group>"; };
 		E170B8661A604E1000C1253A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E170B8681A604E1700C1253A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -101,12 +109,17 @@
 				E1DCDB561A07D66400C2834B /* Images.xcassets */,
 				E1DCDB581A07D68900C2834B /* LaunchScreen.xib */,
 				E1DCDB591A07D68900C2834B /* Main.storyboard */,
+				E117E17C1AA0FE95004AF818 /* WZIPMediaTableViewController.h */,
+				E117E17D1AA0FE95004AF818 /* WZIPMediaTableViewController.m */,
+				E117E17F1AA0FF2E004AF818 /* WZIPMediaWebViewController.h */,
+				E117E1801AA0FF2E004AF818 /* WZIPMediaWebViewController.m */,
 				E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */,
 				E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */,
 				E1DBD3571A0AB9E300B4A9ED /* ZTVYouTubeViewController.h */,
 				E1DBD3581A0AB9E300B4A9ED /* ZTVYouTubeViewController.m */,
 				E1DCDB661A08059500C2834B /* WZIPAVPlayerViewController.h */,
 				E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */,
+				E117E1821AA12F67004AF818 /* s24354q.png */,
 				E1DCDB5F1A07D97400C2834B /* SocialMediaTableViewController.h */,
 				E1DCDB601A07D97400C2834B /* SocialMediaTableViewController.m */,
 				E1DCDB5C1A07D6B500C2834B /* FacebookViewController.h */,
@@ -191,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E117E1831AA12F68004AF818 /* s24354q.png in Resources */,
 				E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */,
 				E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */,
 				E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */,
@@ -206,7 +220,9 @@
 			files = (
 				E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */,
 				E1DCDB611A07D97400C2834B /* SocialMediaTableViewController.m in Sources */,
+				E117E17E1AA0FE95004AF818 /* WZIPMediaTableViewController.m in Sources */,
 				E1DCDB5E1A07D6B500C2834B /* FacebookViewController.m in Sources */,
+				E117E1811AA0FF2E004AF818 /* WZIPMediaWebViewController.m in Sources */,
 				E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */,
 				E1DCDB301A07D60100C2834B /* main.m in Sources */,
 				E1DBD3591A0AB9E300B4A9ED /* ZTVYouTubeViewController.m in Sources */,
