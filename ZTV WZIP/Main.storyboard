@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -80,27 +80,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFh-kK-t92">
-                                <rect key="frame" x="0.0" y="274" width="600" height="277"/>
+                                <rect key="frame" x="0.0" y="223" width="600" height="328"/>
                                 <connections>
                                     <segue destination="USo-h6-Ah3" kind="embed" id="TE7-sz-5Vm"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ztvlogo" translatesAutoresizingMaskIntoConstraints="NO" id="STn-7k-MAE">
-                                <rect key="frame" x="16" y="20" width="568" height="246"/>
+                                <rect key="frame" x="16" y="20" width="568" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="Zwe-l9-Y3B"/>
+                                    <constraint firstAttribute="height" constant="195" id="Mc6-SK-t4g"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wFh-kK-t92" firstAttribute="leading" secondItem="Hah-Aj-Nc2" secondAttribute="leading" id="LKj-aA-zCE"/>
-                            <constraint firstAttribute="trailing" secondItem="wFh-kK-t92" secondAttribute="trailing" id="NFr-ki-JPP"/>
-                            <constraint firstItem="wFh-kK-t92" firstAttribute="top" secondItem="STn-7k-MAE" secondAttribute="bottom" constant="8" symbolic="YES" id="Xxb-fC-HYt"/>
-                            <constraint firstItem="STn-7k-MAE" firstAttribute="leading" secondItem="Hah-Aj-Nc2" secondAttribute="leadingMargin" id="aGm-XZ-agu"/>
-                            <constraint firstItem="wFh-kK-t92" firstAttribute="bottom" secondItem="mLJ-16-mqV" secondAttribute="top" id="bIN-Jo-obe"/>
-                            <constraint firstItem="STn-7k-MAE" firstAttribute="top" secondItem="qsu-rq-ELG" secondAttribute="bottom" id="kzk-Kg-EhL"/>
-                            <constraint firstItem="wFh-kK-t92" firstAttribute="centerX" secondItem="STn-7k-MAE" secondAttribute="centerX" id="ybc-SQ-t75"/>
+                            <constraint firstItem="STn-7k-MAE" firstAttribute="leading" secondItem="Hah-Aj-Nc2" secondAttribute="leadingMargin" id="9OX-Bd-gd7"/>
+                            <constraint firstItem="wFh-kK-t92" firstAttribute="centerX" secondItem="STn-7k-MAE" secondAttribute="centerX" id="LVq-kI-MPs"/>
+                            <constraint firstItem="wFh-kK-t92" firstAttribute="bottom" secondItem="mLJ-16-mqV" secondAttribute="top" id="RDY-U9-gfY"/>
+                            <constraint firstItem="wFh-kK-t92" firstAttribute="leading" secondItem="Hah-Aj-Nc2" secondAttribute="leading" id="g5i-Kt-RfE"/>
+                            <constraint firstItem="wFh-kK-t92" firstAttribute="top" secondItem="STn-7k-MAE" secondAttribute="bottom" constant="8" symbolic="YES" id="hB3-bD-VfG"/>
+                            <constraint firstItem="STn-7k-MAE" firstAttribute="top" secondItem="qsu-rq-ELG" secondAttribute="bottom" id="hhW-zd-GFJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wFh-kK-t92" secondAttribute="trailing" id="qJh-Wm-eHp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ZTV" image="TV" id="fFp-md-tgk"/>
@@ -114,7 +114,7 @@
             <objects>
                 <tableViewController id="USo-h6-Ah3" customClass="ZTVShowsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mbF-f4-5DH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="277"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="328"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
