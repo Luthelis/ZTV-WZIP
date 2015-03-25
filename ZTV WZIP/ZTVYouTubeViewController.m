@@ -7,6 +7,7 @@
 //
 
 #import "ZTVYouTubeViewController.h"
+#import "PrimaryTabBarController.h"
 @import AVFoundation;
 
 @interface ZTVYouTubeViewController () <UIWebViewDelegate>
@@ -26,6 +27,17 @@
     [wzip setCategory:AVAudioSessionCategoryPlayback error:nil];
     [wzip setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
     [self becomeFirstResponder];
+    [(PrimaryTabBarController*) [self tabBarController] setLandscapeOK:YES];
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 - (BOOL)canBecomeFirstResponder

@@ -7,10 +7,7 @@
 //
 
 #import "FacebookViewController.h"
-//#import <FacebookSDK/FacebookSDK.h>
-//#import <Bolts/Bolts.h>
-@import Social;
-@import Accounts;
+#import "PrimaryTabBarController.h"
 
 @interface FacebookViewController ()
 
@@ -23,9 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // The next two lines load the social media URL provided by the previous view controller
-    NSURLRequest *socialRequest = [NSURLRequest requestWithURL:self.socialURL];
-    [self.facebookWebView loadRequest:socialRequest];
-    //self.tabBarController.tabBar.hidden = YES;
+    NSMutableURLRequest *socialRequest = [NSMutableURLRequest requestWithURL:self.socialURL];
+        [self.facebookWebView loadRequest:socialRequest];
+    [(PrimaryTabBarController*) [self tabBarController] setLandscapeOK:NO];
 }
 
 - (void)didReceiveMemoryWarning

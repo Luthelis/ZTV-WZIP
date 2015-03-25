@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7525" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,26 +12,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ztvlogo" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-qL-S9x">
-                    <rect key="frame" x="125" y="261" width="231" height="120"/>
+                    <rect key="frame" x="8" y="248" width="464" height="195"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="tBu-eX-A0x"/>
+                        <constraint firstAttribute="height" constant="195" id="Brn-1T-jGE"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s24354q" translatesAutoresizingMaskIntoConstraints="NO" id="OII-sS-k5V">
-                    <rect key="frame" x="125" y="31" width="231" height="205"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="231" id="YLv-hs-7u7"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userlogo276x155" translatesAutoresizingMaskIntoConstraints="NO" id="OII-sS-k5V">
+                    <rect key="frame" x="8" y="26" width="464" height="214"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="OII-sS-k5V" firstAttribute="leading" secondItem="RSW-qL-S9x" secondAttribute="leading" id="Cby-2m-Pjj"/>
-                <constraint firstItem="RSW-qL-S9x" firstAttribute="top" secondItem="OII-sS-k5V" secondAttribute="bottom" constant="25" id="NKU-Qx-k3k"/>
-                <constraint firstItem="RSW-qL-S9x" firstAttribute="trailing" secondItem="OII-sS-k5V" secondAttribute="trailing" id="VEY-g5-HBz"/>
-                <constraint firstAttribute="bottom" secondItem="RSW-qL-S9x" secondAttribute="bottom" constant="99" id="aw7-VT-JNf"/>
-                <constraint firstItem="OII-sS-k5V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="mrZ-qW-cke"/>
-                <constraint firstItem="RSW-qL-S9x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="otr-fz-h0K"/>
+                <constraint firstItem="RSW-qL-S9x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="AII-gS-xAj"/>
+                <constraint firstAttribute="bottom" secondItem="RSW-qL-S9x" secondAttribute="bottom" constant="37" id="E1R-P6-xNA"/>
+                <constraint firstItem="OII-sS-k5V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="UIG-DP-KtH"/>
+                <constraint firstItem="RSW-qL-S9x" firstAttribute="top" secondItem="OII-sS-k5V" secondAttribute="bottom" constant="8" symbolic="YES" id="bj5-nb-H8v"/>
+                <constraint firstItem="OII-sS-k5V" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="c0i-Gt-fEe"/>
+                <constraint firstItem="RSW-qL-S9x" firstAttribute="trailing" secondItem="OII-sS-k5V" secondAttribute="trailing" id="dVf-zk-v1B"/>
+                <constraint firstItem="OII-sS-k5V" firstAttribute="leading" secondItem="RSW-qL-S9x" secondAttribute="leading" id="hc3-Zd-Ciw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -39,7 +37,7 @@
         </view>
     </objects>
     <resources>
-        <image name="s24354q" width="72" height="72"/>
+        <image name="userlogo276x155" width="138" height="76"/>
         <image name="ztvlogo" width="80" height="47"/>
     </resources>
 </document>

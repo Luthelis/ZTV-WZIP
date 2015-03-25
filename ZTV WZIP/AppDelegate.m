@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "Instagram+Photos.h"
-#import "RootTabBarViewController.h"
 
 
 @interface AppDelegate ()
@@ -47,63 +45,4 @@
     // Saves changes in the application's managed object context before the application terminates.
     
 }
-
-- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
-{
-    
-}
-//  To be implemented in a later version
-/*
-- (BOOL)instagramPhotoDatabase
-{
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSURL *documentsDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    NSString *documentName = @"InstagramDatabase";
-    NSURL *documentURL = [documentsDirectory URLByAppendingPathComponent:documentName];
-    UIManagedDocument *instagram = [[UIManagedDocument alloc] initWithFileURL:documentURL];
-    if ([fileManager fileExistsAtPath:[documentURL path]])
-    {
-        [instagram openWithCompletionHandler:^(BOOL success) {
-            //if (success) [self startInstagramDownload:instagram];
-            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:instagram.managedObjectContext forKey:@"Context"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"Context Ready" object:self userInfo:userInfo];
-            NSLog(@"Context Posted");
-        }];
-    }
-    else if (![fileManager fileExistsAtPath:[documentURL path]])
-    {
-        [instagram saveToURL:instagram.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success)
-        {
-            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:instagram.managedObjectContext forKey:@"Context"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"Context Ready" object:self userInfo:userInfo];
-            NSLog(@"Context Posted");
-        }];
-    }
-    return YES;
-}
-
-
- - (void)startInstagramDownload:(UIManagedDocument *)document
-{
-    if (document.documentState == UIDocumentStateNormal)
-    {
-        self.context = document.managedObjectContext;
-        NSDictionary *wzipInstagramDictionary = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://api.instagram.com/v1/users/V/media/recent/?client_id=a5c7afd7cde04beeab556fd6e57dc666"]];
-        NSDictionary *ztvInstagramDictionary = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://api.instagram.com/v1/users/225178844/media/recent/?client_id=a5c7afd7cde04beeab556fd6e57dc666"]];
-        [Instagram photoWithInstagramData:wzipInstagramDictionary inManagedObjectContext:self.context];
-        [Instagram photoWithInstagramData:ztvInstagramDictionary inManagedObjectContext:self.context];
-        
-    }
-    else if (document.documentState == UIDocumentStateClosed)
-    {
-        [document openWithCompletionHandler:^(BOOL success) {
-            if (success)
-            {
-                self.context = document.managedObjectContext;
-            }
-        }];
-    }
-}
-
-*/
 @end

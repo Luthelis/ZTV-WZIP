@@ -10,6 +10,10 @@
 
 @interface WZIPMediaWebViewController : UIViewController
 
+/* 
+    Precondition
+    With the properly passed URL, this method will load a website using the URL
+*/
 @property (strong, nonatomic) NSURL *wzipWebURL;
 
 @end

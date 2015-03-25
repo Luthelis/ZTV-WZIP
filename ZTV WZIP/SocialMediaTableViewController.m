@@ -5,9 +5,9 @@
 //  Created by Timothy Transue on 11/3/14.
 //  Copyright (c) 2014 University of Akron. All rights reserved.
 //
-@import CoreData;
 #import "SocialMediaTableViewController.h"
 #import "FacebookViewController.h"
+#import "PrimaryTabBarController.h"
 
 @interface SocialMediaTableViewController ()
 
@@ -32,6 +32,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [(PrimaryTabBarController*) [self tabBarController] setLandscapeOK:NO];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -219,6 +220,19 @@
             destination.socialURL = socialURL;
             destination.title = @"Undergradz";
         }
+        else if ([segue.identifier isEqualToString:@"sptFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/SportsPowerTalk"];
+            destination.socialURL = socialURL;
+            destination.title = @"Sports Power Talk";
+        }
+        else if ([segue.identifier isEqualToString:@"sptTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/SportsPowerTalk"];
+            destination.socialURL = socialURL;
+            destination.title = @"Sports Power Talk";
+        }
+        
     }
     /*else
     {
