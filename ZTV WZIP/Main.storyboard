@@ -801,8 +801,8 @@
         <image name="WZIP" width="276" height="152"/>
         <image name="ZTV" width="335" height="194"/>
         <image name="lca cover" width="960" height="537"/>
-        <image name="next" width="11" height="21"/>
-        <image name="previous" width="11" height="21"/>
+        <image name="next" width="12" height="21"/>
+        <image name="previous" width="12" height="21"/>
         <image name="undergradz" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
