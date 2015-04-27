@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x",
+      "scale" : "1x",
       "filename" : "lca cover.jpg"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "2x",
+      "filename" : "lca cover@2x.jpg"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "lca cover@3x.jpg"
     }
   ],
   "info" : {

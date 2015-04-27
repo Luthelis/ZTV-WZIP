@@ -9,7 +9,7 @@
 #import "WZIPAVPlayerViewController.h"
 @import MediaPlayer;
 
-@interface WZIPAVPlayerViewController () <NSXMLParserDelegate>
+@interface WZIPAVPlayerViewController ()
 
 @property (nonatomic, strong) NSString *artist;
 @property (nonatomic, strong) NSString *songTitle;
@@ -89,26 +89,7 @@
     [self configureControlCenter];
 }
 
-- (NSDictionary *)playlistDictionary
-{
-    // This entire method is a failed attempt at locating XML metadata files.  Disregard until able to implement
-    long long currentMillisTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
-    NSMutableArray *urls = [[NSMutableArray alloc] init];
-    NSURL *playlistURL;
-    for (int index = 0; index == 199999; index++)
-    {
-        playlistURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.live365.com/pls/front?handler=playlist&cmd=view&viewType=xml&handle=wzip&maxEntries=3&tm=%lld", currentMillisTime-index]];
-        [urls addObject:playlistURL];
-    };
-    for (NSURL *primaryURL in urls) {
-        if ([primaryURL isFileURL]) {
-            NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:playlistURL];
-            parser.delegate = self;
-            [parser parse];
-        }
-    }
-    return _playlistDictionary;
-}
+
 - (void)configureControlCenter
 {
     MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];

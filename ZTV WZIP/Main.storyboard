@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userlogo276x155" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-wz-RFr">
-                                <rect key="frame" x="142" y="20" width="316" height="257"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WZIP" translatesAutoresizingMaskIntoConstraints="NO" id="yhz-wz-RFr">
+                                <rect key="frame" x="16" y="20" width="568" height="257"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="257" id="Unu-GD-Lb2"/>
-                                    <constraint firstAttribute="width" constant="316" id="osV-nl-ZVS"/>
+                                    <constraint firstAttribute="height" constant="257" id="A5a-uF-8qj"/>
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DK3-XA-rXG">
@@ -33,15 +32,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DK3-XA-rXG" firstAttribute="trailing" secondItem="mHG-Fd-WpB" secondAttribute="trailingMargin" id="3bU-xq-HsV"/>
-                            <constraint firstItem="DK3-XA-rXG" firstAttribute="leading" secondItem="mHG-Fd-WpB" secondAttribute="leadingMargin" id="7jF-9U-fwq"/>
-                            <constraint firstItem="DK3-XA-rXG" firstAttribute="centerX" secondItem="yhz-wz-RFr" secondAttribute="centerX" id="EON-AD-ssA"/>
-                            <constraint firstItem="yhz-wz-RFr" firstAttribute="top" secondItem="1y7-Nk-8z2" secondAttribute="bottom" id="XNd-sx-vCU"/>
-                            <constraint firstItem="QEf-rj-xbR" firstAttribute="top" secondItem="DK3-XA-rXG" secondAttribute="bottom" constant="8" symbolic="YES" id="gUn-IQ-per"/>
-                            <constraint firstItem="DK3-XA-rXG" firstAttribute="top" secondItem="yhz-wz-RFr" secondAttribute="bottom" constant="8" symbolic="YES" id="oaO-VH-QeL"/>
+                            <constraint firstItem="yhz-wz-RFr" firstAttribute="trailing" secondItem="DK3-XA-rXG" secondAttribute="trailing" id="2av-B9-Y2w"/>
+                            <constraint firstItem="DK3-XA-rXG" firstAttribute="trailing" secondItem="mHG-Fd-WpB" secondAttribute="trailingMargin" id="Cof-Y5-buM"/>
+                            <constraint firstItem="yhz-wz-RFr" firstAttribute="leading" secondItem="mHG-Fd-WpB" secondAttribute="leadingMargin" id="PVO-8F-csm"/>
+                            <constraint firstItem="DK3-XA-rXG" firstAttribute="top" secondItem="yhz-wz-RFr" secondAttribute="bottom" constant="8" symbolic="YES" id="Unx-7I-TRy"/>
+                            <constraint firstItem="yhz-wz-RFr" firstAttribute="top" secondItem="1y7-Nk-8z2" secondAttribute="bottom" id="t0P-Tf-Bnk"/>
+                            <constraint firstItem="QEf-rj-xbR" firstAttribute="top" secondItem="DK3-XA-rXG" secondAttribute="bottom" constant="8" symbolic="YES" id="w7L-Og-pFR"/>
+                            <constraint firstItem="DK3-XA-rXG" firstAttribute="leading" secondItem="yhz-wz-RFr" secondAttribute="leading" id="zYk-QM-ibK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WZIP" image="Speaker" id="oUL-v6-vCa"/>
+                    <tabBarItem key="tabBarItem" title="WZIP" image="radioIcon" id="oUL-v6-vCa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoc-el-MY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +85,7 @@
                                     <segue destination="USo-h6-Ah3" kind="embed" id="TE7-sz-5Vm"/>
                                 </connections>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ztvlogo" translatesAutoresizingMaskIntoConstraints="NO" id="STn-7k-MAE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZTV" translatesAutoresizingMaskIntoConstraints="NO" id="STn-7k-MAE">
                                 <rect key="frame" x="16" y="20" width="568" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="Mc6-SK-t4g"/>
@@ -125,7 +125,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="157-bz-BPj" id="wJg-2W-yER">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AAH-logo-thumb-keyable" translatesAutoresizingMaskIntoConstraints="NO" id="T9T-5V-GDV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AAH" translatesAutoresizingMaskIntoConstraints="NO" id="T9T-5V-GDV">
                                                     <rect key="frame" x="0.0" y="2" width="89" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Akron After Hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-qN-3x2">
@@ -145,7 +145,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uu2-66-GRg" id="Uae-qx-pSL">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goofing-Off-Logo-thumb-keyable" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-ch-dKL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoofingOff" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-ch-dKL">
                                                     <rect key="frame" x="0.0" y="1" width="89" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goofing Off!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnh-BT-qg1">
@@ -185,7 +185,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUC-80-fvo" id="s8T-k3-ASP">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sports-Report-Logo-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-Jf-hIs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sports" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-Jf-hIs">
                                                     <rect key="frame" x="0.0" y="1" width="102" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sports Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-Jr-VDE">
@@ -205,7 +205,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kuC-eb-z9W" id="lZb-A4-uVH">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mq1" translatesAutoresizingMaskIntoConstraints="NO" id="q8p-oq-eOH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lowdown" translatesAutoresizingMaskIntoConstraints="NO" id="q8p-oq-eOH">
                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lowdown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqT-6o-ikd">
@@ -249,7 +249,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XCx-z6-6nV" id="vco-q1-Xt1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="The Fee" translatesAutoresizingMaskIntoConstraints="NO" id="JXp-X2-BzC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="The Feed" translatesAutoresizingMaskIntoConstraints="NO" id="JXp-X2-BzC">
                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Feed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-Ri-LBV">
@@ -269,7 +269,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WlE-sL-SYd" id="eJB-cE-LdR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lsI-W4-tb9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chic" translatesAutoresizingMaskIntoConstraints="NO" id="lsI-W4-tb9">
                                                     <rect key="frame" x="0.0" y="0.0" width="102" height="59"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="So Chic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-DV-xa8">
@@ -359,7 +359,7 @@
         <scene sceneID="QbF-Vd-V37">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ggc-yC-U4p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="Social Media - Facebook" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="Facebook" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGS-WX-gVe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -789,21 +789,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AAH-logo-thumb-keyable" width="75" height="47"/>
-        <image name="Goofing-Off-Logo-thumb-keyable" width="75" height="47"/>
-        <image name="Social Media - Facebook" width="24" height="24"/>
-        <image name="Speaker" width="24" height="24"/>
-        <image name="Sports-Report-Logo-thumb" width="75" height="42"/>
+        <image name="AAH" width="150" height="95"/>
+        <image name="Chic" width="2560" height="1419"/>
+        <image name="Facebook" width="24" height="24"/>
+        <image name="GoofingOff" width="150" height="95"/>
+        <image name="Lowdown" width="240" height="240"/>
+        <image name="Sports" width="150" height="84"/>
         <image name="TV" width="24" height="24"/>
-        <image name="The Fee" width="120" height="120"/>
-        <image name="lca cover" width="480" height="268"/>
-        <image name="logo" width="1280" height="720"/>
-        <image name="mq1" width="120" height="120"/>
+        <image name="The Feed" width="240" height="240"/>
+        <image name="WZIP" width="276" height="152"/>
+        <image name="ZTV" width="335" height="194"/>
+        <image name="lca cover" width="960" height="537"/>
         <image name="next" width="11" height="21"/>
         <image name="previous" width="11" height="21"/>
-        <image name="undergradz" width="50" height="50"/>
-        <image name="userlogo276x155" width="138" height="76"/>
-        <image name="ztvlogo" width="80" height="47"/>
+        <image name="radioIcon" width="24" height="24"/>
+        <image name="undergradz" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gFs-vr-s0P"/>
