@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +41,7 @@
                             <constraint firstItem="DK3-XA-rXG" firstAttribute="leading" secondItem="yhz-wz-RFr" secondAttribute="leading" id="zYk-QM-ibK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WZIP" image="radioIcon" id="oUL-v6-vCa"/>
+                    <tabBarItem key="tabBarItem" title="WZIP" image="Speaker" id="oUL-v6-vCa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoc-el-MY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -794,6 +794,7 @@
         <image name="Facebook" width="24" height="24"/>
         <image name="GoofingOff" width="150" height="95"/>
         <image name="Lowdown" width="240" height="240"/>
+        <image name="Speaker" width="24" height="24"/>
         <image name="Sports" width="150" height="84"/>
         <image name="TV" width="24" height="24"/>
         <image name="The Feed" width="240" height="240"/>
@@ -802,7 +803,6 @@
         <image name="lca cover" width="960" height="537"/>
         <image name="next" width="11" height="21"/>
         <image name="previous" width="11" height="21"/>
-        <image name="radioIcon" width="24" height="24"/>
         <image name="undergradz" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
