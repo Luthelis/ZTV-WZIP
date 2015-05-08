@@ -141,6 +141,11 @@
                  youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
                  destination.titleBar.topItem.title = @"Undergradz";
              }
+             else if ([segue.identifier isEqualToString:@"science"])
+             {
+                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ"];
+                 destination.titleBar.topItem.title = @"ZTV's 300 Seconds of Science";
+             }
              else youtubeURL = nil;
              // Send the proper URL Request to the destination view controller
              NSURLRequest *youtubeRequest = [NSURLRequest requestWithURL:youtubeURL];

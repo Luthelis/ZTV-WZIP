@@ -208,7 +208,7 @@
             destination.socialURL = socialURL;
             destination.title = @"Lowdown";
         }
-        else if ([segue.identifier isEqualToString:@"undergradzFB"])
+        else if ([segue.identifier isEqualToString:@"undergradzFacebook"])
         {
             socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
             destination.socialURL = socialURL;
@@ -232,7 +232,18 @@
             destination.socialURL = socialURL;
             destination.title = @"Sports Power Talk";
         }
-        
+        else if ([segue.identifier isEqualToString:@"scienceTwitter"])
+        {
+            socialURL = [NSURL URLWithString:@"https://twitter.com/300SecOfScience"];
+            destination.socialURL = socialURL;
+            destination.title = @"ZTV's 300 Seconds of Science";
+        }
+        else if ([segue.identifier isEqualToString:@"scienceFacebook"])
+        {
+            socialURL = [NSURL URLWithString:@"https://www.facebook.com/pages/ZTVs-300-Seconds-of-Science/1420366161604098?fref=ts"];
+            destination.socialURL = socialURL;
+            destination.title = @"ZTV's 300 Seconds of Science";
+        }
     }
     /*else
     {
