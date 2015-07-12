@@ -29,7 +29,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if (self.landscapeOK) {
         return UIInterfaceOrientationMaskAllButUpsideDown;

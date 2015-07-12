@@ -7,17 +7,18 @@
 //
 
 #import "ZTVShowsTableViewController.h"
-#import "ZTVYouTubeViewController.h"
+@import SafariServices;
 
-@interface ZTVShowsTableViewController ()
+@interface ZTVShowsTableViewController () <SFSafariViewControllerDelegate>
 
 @end
 
 @implementation ZTVShowsTableViewController
 
+#pragma mark - View Controller Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -46,14 +47,116 @@
 }
 */
 /*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell.reuseIdentifier forIndexPath:indexPath];
+    if ([cell.reuseIdentifier isEqualToString:@"aah"])
+    {
+        cell.tag = 1;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"lca"])
+    {
+        cell.tag = 2;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"sr"])
+    {
+        cell.tag = 3;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"go"])
+    {
+        cell.tag = 4;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"ld"])
+    {
+        cell.tag = 5;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"ug"])
+    {
+        cell.tag = 6;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"sci"])
+    {
+        cell.tag = 7;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"feed"])
+    {
+        cell.tag = 8;
+    }
+    else if ([cell.reuseIdentifier isEqualToString:@"chic"])
+    {
+        cell.tag = 9;
+    }
     return cell;
 }
 */
+
+- (NSInteger)tagForIndexPath:(NSIndexPath *)path
+{
+    return path.section * 1000 + path.row + 1;
+}
+
+- (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    
+    NSURL *youtubeURL;
+    if (indexPath.section == 0)
+    {
+        if (indexPath.row == 0)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVAkronAfterHours"];
+        }
+        else if (indexPath.row == 1)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVLCA"];
+        }
+        else if (indexPath.row == 2)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVsports"];
+        }
+        else if (indexPath.row == 3)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ztvgoofingoff"];
+        }
+        else if (indexPath.row == 4)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ztvlowdown"];
+        }
+        else if (indexPath.row == 5)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
+        }
+        else if (indexPath.row == 6)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ;"];
+        }
+    }
+    else if (indexPath.section == 1)
+    {
+        if (indexPath.row == 0)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCPHbqRYdXcPFA9BocjQPusw"];
+        }
+        else if (indexPath.row == 1)
+        {
+            youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCzAPLA1iIWVkqaoEN2FbRJg"];
+        }
+    }
+    [self instantiateSafariViewController:youtubeURL];
+}
+
+#pragma mark - Safari View Controller methods
+
+- (void)instantiateSafariViewController:(nonnull NSURL *)youTubeURL
+{
+    SFSafariViewController *youtubeViewController = [[SFSafariViewController alloc] initWithURL:youTubeURL];
+    youtubeViewController.delegate = self;
+    [self presentViewController:youtubeViewController animated:YES completion:nil];
+}
+
+- (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -91,7 +194,7 @@
 
 
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -143,15 +246,14 @@
              }
              else if ([segue.identifier isEqualToString:@"science"])
              {
-                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ"];
+                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ;"]
                  destination.titleBar.topItem.title = @"ZTV's 300 Seconds of Science";
              }
              else youtubeURL = nil;
              // Send the proper URL Request to the destination view controller
-             NSURLRequest *youtubeRequest = [NSURLRequest requestWithURL:youtubeURL];
-             destination.youtubeURLRequest = youtubeRequest;
+             destination.youtubeURL = youtubeURL;
          }
 }
-
+*/
 
 @end

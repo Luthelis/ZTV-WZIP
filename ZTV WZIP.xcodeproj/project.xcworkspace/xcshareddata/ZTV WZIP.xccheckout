@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>809E5C68-A3EF-4EC8-8DD3-02862F06D979</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ZTV WZIP</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6CA38998FDDDDE53776B99F43E7B6417FA0C3BD2</key>
 		<string>https://github.com/Luthelis/ZTV-WZIP.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ZTV WZIP.xcodeproj</string>
+	<string>ZTV WZIP.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6CA38998FDDDDE53776B99F43E7B6417FA0C3BD2</key>

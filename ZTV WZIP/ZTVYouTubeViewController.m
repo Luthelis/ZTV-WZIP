@@ -9,20 +9,25 @@
 #import "ZTVYouTubeViewController.h"
 #import "PrimaryTabBarController.h"
 @import AVFoundation;
+@import SafariServices;
 
-@interface ZTVYouTubeViewController () <UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UIWebView *youtubeWebView;
+@interface ZTVYouTubeViewController () <SFSafariViewControllerDelegate, UIWebViewDelegate>
 @property (strong, nonatomic) NSMutableArray *URLArray;
+@property (weak, nonatomic) IBOutlet UIWebView *youTubeView;
 @end
 
 @implementation ZTVYouTubeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.youtubeWebView.delegate = self;
+    self.youTubeView.delegate = self;
     // Do any additional setup after loading the view.
     // Sets the web view to the proper YouTube page
-    [self.youtubeWebView loadRequest:self.youtubeURLRequest];
+    SFSafariViewController *safariYouTubeController = [[SFSafariViewController alloc] initWithURL:self.youtubeURL];
+    safariYouTubeController.delegate = self;
+    [self presentViewController:safariYouTubeController animated:YES completion:^{
+        
+    }];
     AVAudioSession *wzip = [AVAudioSession sharedInstance];
     [wzip setCategory:AVAudioSessionCategoryPlayback error:nil];
     [wzip setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
@@ -35,7 +40,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
@@ -59,12 +64,12 @@
 
 - (IBAction)backButton:(UIBarButtonItem *)sender
 {
-    [self.youtubeWebView goBack];
+    [self.youTubeView goBack];
 }
 
 - (IBAction)forwardButton:(UIBarButtonItem *)sender
 {
-    [self.youtubeWebView goForward];
+    [self.youTubeView goForward];
 }
 
 /*

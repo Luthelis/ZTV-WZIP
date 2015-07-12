@@ -6,12 +6,10 @@
 //  Copyright (c) 2014 Timothy Transue. All rights reserved.
 //
 #import "SocialMediaTableViewController.h"
-#import "FacebookViewController.h"
 #import "PrimaryTabBarController.h"
+@import SafariServices;
 
-@interface SocialMediaTableViewController ()
-
-@property (nonatomic, strong) NSManagedObjectContext *context;
+@interface SocialMediaTableViewController () <SFSafariViewControllerDelegate>
 
 @end
 
@@ -21,7 +19,6 @@
 {
     [super awakeFromNib];
     // This is not necessary in this version
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(provideManagedObjectContext:) name:@"Context" object:nil];
 }
 
 - (void)viewDidLoad {
@@ -46,12 +43,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)provideManagedObjectContext:(NSNotification *)notification
-{
-    // This method is not used in this version.  Also related to the Managed Object Context
-    self.context = [notification.userInfo objectForKey:@"Context"];
-    NSLog(@"Context provided");
-}
 
 #pragma mark - Table view data source
 /*
@@ -60,16 +51,118 @@
     // Return the number of sections.
     return 2;
 }
-
+ 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 7;
 }
 */
+
+- (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    NSURL *socialMediaURL;
+    if (indexPath.section == 0)
+    {
+        if (indexPath.row == 0)
+        {
+            socialMediaURL = [NSURL URLWithString:@"http://www.facebook.com/wzipfm"];
+        }
+        else if (indexPath.row == 1)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/WZIP"];
+        }
+        else if (indexPath.row == 2)
+        {
+            socialMediaURL = [NSURL URLWithString:@"http://www.facebook.com/ZTVAkron"];
+        }
+        else if (indexPath.row == 3)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ZTVAkron"];
+        }
+        else if (indexPath.row == 4)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/akronafterhours"];
+        }
+        else if (indexPath.row == 5)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/akronafterhours"];
+        }
+        else if (indexPath.row == 6)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/ztvLCA"];
+        }
+        else if (indexPath.row == 7)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ztvlca"];
+        }
+        else if (indexPath.row == 8)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/TheZTVSportsReport"];
+        }
+        else if (indexPath.row == 9)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ztvsports"];
+        }
+        else if (indexPath.row == 10)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/GoofingOff"];
+        }
+        else if (indexPath.row == 11)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ztvgoofingoff"];
+        }
+        else if (indexPath.row == 12)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVLowdown"];
+        }
+        else if (indexPath.row == 13)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ztvlowdown"];
+        }
+        else if (indexPath.row == 14)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
+        }
+        else if (indexPath.row == 15)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/ztvundergradz"];
+        }
+        else if (indexPath.row == 16)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/pages/ZTVs-300-Seconds-of-Science/1420366161604098?fref=ts"];
+        }
+        else if (indexPath.row == 17)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/300SecOfScience"];
+        }
+        else if (indexPath.row == 18)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://www.facebook.com/SportsPowerTalk"];
+        }
+        else if (indexPath.row == 19)
+        {
+            socialMediaURL = [NSURL URLWithString:@"https://twitter.com/SportsPowerTalk"];
+        }
+    }
+    [self instantiateSafariViewController:socialMediaURL];
+}
+
+- (void)instantiateSafariViewController:(NSURL *)URL
+{
+    SFSafariViewController *controller = [[SFSafariViewController alloc] initWithURL:URL];
+    controller.delegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil forIndexPath:indexPath];
     
     // Configure the cell...
     
@@ -113,149 +206,17 @@
 
 
 #pragma mark - Navigation
-
+/*
+// This code has been replaced with the SFSafariViewController code listed in tableView:didSelectRowAtIndexPath:
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+{
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSURL *socialURL;
-    // The following code determines which social media link was selected and provides the proper URL to the destination view controller
-    if ([[segue destinationViewController] isKindOfClass:[FacebookViewController class]])
-    {
-        FacebookViewController *destination = [segue destinationViewController];
-        if ([segue.identifier isEqualToString:@"ztvFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"http://www.facebook.com/ZTVAkron"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV Facebook";
-        }
-        else if ([segue.identifier isEqualToString:@"ztvTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ZTVAkron"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV Twitter";
-        }
-        else if ([segue.identifier isEqualToString:@"wzipFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"http://www.facebook.com/wzipfm"];
-            destination.socialURL = socialURL;
-            destination.title = @"WZIP Facebook";
-        }
-        else if ([segue.identifier isEqualToString:@"wzipTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/WZIP"];
-            destination.socialURL = socialURL;
-            destination.title = @"WZIP Twitter";
-
-        }
-        else if ([segue.identifier isEqualToString:@"aahFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/akronafterhours"];
-            destination.socialURL = socialURL;
-            destination.title = @"Akron After Hours";
-        }
-        else if ([segue.identifier isEqualToString:@"aahTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/akronafterhours"];
-            destination.socialURL = socialURL;
-            destination.title = @"Akron After Hours";
-        }
-        else if ([segue.identifier isEqualToString:@"goofFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/GoofingOff"];
-            destination.socialURL = socialURL;
-            destination.title = @"Goofing Off!";
-        }
-        else if ([segue.identifier isEqualToString:@"goofTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvgoofingoff"];
-            destination.socialURL = socialURL;
-            destination.title = @"Goofing Off!";
-        }
-        else if ([segue.identifier isEqualToString:@"lcaFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvLCA"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lights, Camera, Akron!";
-        }
-        else if ([segue.identifier isEqualToString:@"lcaTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlca"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lights, Camera, Akron!";
-        }
-        else if ([segue.identifier isEqualToString:@"sportsFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/TheZTVSportsReport"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Report";
-        }
-        else if ([segue.identifier isEqualToString:@"sportsTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsports"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Report";
-        }
-        else if ([segue.identifier isEqualToString:@"lowFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVLowdown"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lowdown";
-        }
-        else if ([segue.identifier isEqualToString:@"lowTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlowdown"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lowdown";
-        }
-        else if ([segue.identifier isEqualToString:@"undergradzFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
-            destination.socialURL = socialURL;
-            destination.title = @"Undergradz";
-        }
-        else if ([segue.identifier isEqualToString:@"undergradzTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvundergradz"];
-            destination.socialURL = socialURL;
-            destination.title = @"Undergradz";
-        }
-        else if ([segue.identifier isEqualToString:@"sptFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/SportsPowerTalk"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Power Talk";
-        }
-        else if ([segue.identifier isEqualToString:@"sptTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/SportsPowerTalk"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Power Talk";
-        }
-        else if ([segue.identifier isEqualToString:@"scienceTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/300SecOfScience"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV's 300 Seconds of Science";
-        }
-        else if ([segue.identifier isEqualToString:@"scienceFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/pages/ZTVs-300-Seconds-of-Science/1420366161604098?fref=ts"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV's 300 Seconds of Science";
-        }
-    }
-    /*else
-    {
-        UIStoryboard *instagramStoryboard = [UIStoryboard storyboardWithName:@"Instagram" bundle:[NSBundle mainBundle]];
-        [instagramStoryboard instantiateInitialViewController];
-    }*/
 }
-
+*/
 - (void)dealloc
 {
-    // The following line is necessary to remove the view controller from the notification center.  Will break without this line involved.
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

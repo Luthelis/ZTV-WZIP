@@ -12,7 +12,6 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSManagedObjectContext *context;  //Managed Object Context to be used in later versions
 
 @end
 
