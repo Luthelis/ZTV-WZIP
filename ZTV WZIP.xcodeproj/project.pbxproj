@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E196578A1AF11D8E0042F64D /* SocialMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19657891AF11D8E0042F64D /* SocialMainViewController.m */; };
 		E1AF18A01B54762D00686734 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AF189F1B54762D00686734 /* SafariServices.framework */; };
 		E1C0BBD81A0D4CB100CCF4D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */; };
 		E1DAE10B1AC21B0100F325BA /* PrimaryTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DAE10A1AC21B0100F325BA /* PrimaryTabBarController.m */; };
@@ -28,8 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E19657881AF11D8E0042F64D /* SocialMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMainViewController.h; sourceTree = "<group>"; };
-		E19657891AF11D8E0042F64D /* SocialMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMainViewController.m; sourceTree = "<group>"; };
 		E1AF189F1B54762D00686734 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1DAE1091AC21B0100F325BA /* PrimaryTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryTabBarController.h; sourceTree = "<group>"; };
@@ -110,8 +107,6 @@
 				E1DCDB561A07D66400C2834B /* Images.xcassets */,
 				E1DCDB581A07D68900C2834B /* LaunchScreen.xib */,
 				E1DCDB591A07D68900C2834B /* Main.storyboard */,
-				E19657881AF11D8E0042F64D /* SocialMainViewController.h */,
-				E19657891AF11D8E0042F64D /* SocialMainViewController.m */,
 				E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */,
 				E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */,
 				E1DAE10C1AC21BBB00F325BA /* ZTVMainViewController.h */,
@@ -221,7 +216,6 @@
 				E1DCDB5E1A07D6B500C2834B /* FacebookViewController.m in Sources */,
 				E1DAE10E1AC21BBB00F325BA /* ZTVMainViewController.m in Sources */,
 				E1DAE1111AC220F100F325BA /* WZIPMainViewController.m in Sources */,
-				E196578A1AF11D8E0042F64D /* SocialMainViewController.m in Sources */,
 				E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */,
 				E1DCDB301A07D60100C2834B /* main.m in Sources */,
 				E1DBD3561A0AB9C800B4A9ED /* ZTVShowsTableViewController.m in Sources */,
