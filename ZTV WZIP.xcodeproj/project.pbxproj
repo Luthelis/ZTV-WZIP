@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E19F445E1B483698006EA40C /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19F445D1B483698006EA40C /* SafariServices.framework */; };
+		E1AC4A2D1B532CAF0016BF39 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AC4A2C1B532CAF0016BF39 /* FacebookViewController.m */; };
 		E1C0BBD81A0D4CB100CCF4D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */; };
 		E1DAE10B1AC21B0100F325BA /* PrimaryTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DAE10A1AC21B0100F325BA /* PrimaryTabBarController.m */; };
 		E1DAE10E1AC21BBB00F325BA /* ZTVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DAE10D1AC21BBB00F325BA /* ZTVMainViewController.m */; };
@@ -17,7 +18,7 @@
 		E1DCDB331A07D60100C2834B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB321A07D60100C2834B /* AppDelegate.m */; };
 		E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB561A07D66400C2834B /* Images.xcassets */; };
 		E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB581A07D68900C2834B /* LaunchScreen.xib */; };
-		E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB591A07D68900C2834B /* Main.storyboard */; settings = {ASSET_TAGS = (0, ); }; };
+		E1DCDB5B1A07D68900C2834B /* Primary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DCDB591A07D68900C2834B /* Primary.storyboard */; settings = {ASSET_TAGS = (0, ); }; };
 		E1DCDB611A07D97400C2834B /* SocialMediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCDB601A07D97400C2834B /* SocialMediaTableViewController.m */; };
 		E1DCDB631A07FC6A00C2834B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB621A07FC6A00C2834B /* AVKit.framework */; };
 		E1DCDB651A07FC6F00C2834B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DCDB641A07FC6F00C2834B /* AVFoundation.framework */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		E19F445D1B483698006EA40C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		E1AC4A2B1B532CAF0016BF39 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
+		E1AC4A2C1B532CAF0016BF39 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
 		E1C0BBD71A0D4CB100CCF4D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1DAE1091AC21B0100F325BA /* PrimaryTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryTabBarController.h; sourceTree = "<group>"; };
 		E1DAE10A1AC21B0100F325BA /* PrimaryTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryTabBarController.m; sourceTree = "<group>"; };
@@ -43,7 +46,7 @@
 		E1DCDB321A07D60100C2834B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1DCDB561A07D66400C2834B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1DCDB581A07D68900C2834B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		E1DCDB591A07D68900C2834B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E1DCDB591A07D68900C2834B /* Primary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Primary.storyboard; sourceTree = "<group>"; };
 		E1DCDB5F1A07D97400C2834B /* SocialMediaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaTableViewController.h; sourceTree = "<group>"; };
 		E1DCDB601A07D97400C2834B /* SocialMediaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaTableViewController.m; sourceTree = "<group>"; };
 		E1DCDB621A07FC6A00C2834B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,8 @@
 			children = (
 				E1DAE10F1AC220F100F325BA /* WZIPMainViewController.h */,
 				E1DAE1101AC220F100F325BA /* WZIPMainViewController.m */,
+				E1DCDB661A08059500C2834B /* WZIPAVPlayerViewController.h */,
+				E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */,
 				E1DAE1091AC21B0100F325BA /* PrimaryTabBarController.h */,
 				E1DAE10A1AC21B0100F325BA /* PrimaryTabBarController.m */,
 				E1DCDB6E1A0836A200C2834B /* ZTV WZIP.entitlements */,
@@ -103,13 +108,13 @@
 				E1DCDB321A07D60100C2834B /* AppDelegate.m */,
 				E1DCDB561A07D66400C2834B /* Images.xcassets */,
 				E1DCDB581A07D68900C2834B /* LaunchScreen.xib */,
-				E1DCDB591A07D68900C2834B /* Main.storyboard */,
+				E1DCDB591A07D68900C2834B /* Primary.storyboard */,
+				E1AC4A2B1B532CAF0016BF39 /* FacebookViewController.h */,
+				E1AC4A2C1B532CAF0016BF39 /* FacebookViewController.m */,
 				E1DBD3541A0AB9C800B4A9ED /* ZTVShowsTableViewController.h */,
 				E1DBD3551A0AB9C800B4A9ED /* ZTVShowsTableViewController.m */,
 				E1DAE10C1AC21BBB00F325BA /* ZTVMainViewController.h */,
 				E1DAE10D1AC21BBB00F325BA /* ZTVMainViewController.m */,
-				E1DCDB661A08059500C2834B /* WZIPAVPlayerViewController.h */,
-				E1DCDB671A08059500C2834B /* WZIPAVPlayerViewController.m */,
 				E1DCDB5F1A07D97400C2834B /* SocialMediaTableViewController.h */,
 				E1DCDB601A07D97400C2834B /* SocialMediaTableViewController.m */,
 				E1DCDB2D1A07D60100C2834B /* Supporting Files */,
@@ -195,7 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DCDB5B1A07D68900C2834B /* Main.storyboard in Resources */,
+				E1DCDB5B1A07D68900C2834B /* Primary.storyboard in Resources */,
 				E1DCDB5A1A07D68900C2834B /* LaunchScreen.xib in Resources */,
 				E1DCDB571A07D66400C2834B /* Images.xcassets in Resources */,
 			);
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AC4A2D1B532CAF0016BF39 /* FacebookViewController.m in Sources */,
 				E1DCDB681A08059500C2834B /* WZIPAVPlayerViewController.m in Sources */,
 				E1DCDB611A07D97400C2834B /* SocialMediaTableViewController.m in Sources */,
 				E1DAE10B1AC21B0100F325BA /* PrimaryTabBarController.m in Sources */,

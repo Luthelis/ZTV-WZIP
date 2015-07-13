@@ -148,11 +148,11 @@
     [self instantiateSafariViewController:socialMediaURL];
 }
 
-- (void)instantiateSafariViewController:(NSURL *)URL
+- (void)instantiateSafariViewController:(nonnull NSURL *)URL
 {
-    SFSafariViewController *controller = [[SFSafariViewController alloc] initWithURL:URL];
-    controller.delegate = self;
-    [self presentViewController:controller animated:YES completion:nil];
+    SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:URL];
+    safariViewController.delegate = self;
+    [self presentViewController:safariViewController animated:YES completion:nil];
 }
 
 - (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller

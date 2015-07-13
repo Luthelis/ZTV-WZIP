@@ -146,9 +146,9 @@
 
 #pragma mark - Safari View Controller methods
 
-- (void)instantiateSafariViewController:(nonnull NSURL *)youTubeURL
+- (void)instantiateSafariViewController:(nonnull NSURL *)URL
 {
-    SFSafariViewController *youtubeViewController = [[SFSafariViewController alloc] initWithURL:youTubeURL];
+    SFSafariViewController *youtubeViewController = [[SFSafariViewController alloc] initWithURL:URL];
     youtubeViewController.delegate = self;
     [self presentViewController:youtubeViewController animated:YES completion:nil];
 }
