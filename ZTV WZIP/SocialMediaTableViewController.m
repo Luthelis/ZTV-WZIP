@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Timothy Transue. All rights reserved.
 //
 #import "SocialMediaTableViewController.h"
-#import "FacebookViewController.h"
 #import "PrimaryTabBarController.h"
+@import SafariServices;
 
-@interface SocialMediaTableViewController ()
+@interface SocialMediaTableViewController () <SFSafariViewControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
@@ -110,146 +110,100 @@
     return YES;
 }
 */
-
+- (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    NSURL *socialURL;
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                    socialURL = [NSURL URLWithString:@"http://www.facebook.com/wzipfm"];
+                    break;
+                case 1:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/WZIP"];
+                    break;
+                case 2:
+                    socialURL = [NSURL URLWithString:@"http://www.facebook.com/ZTVAkron"];
+                    break;
+                case 3:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ZTVAkron"];
+                    break;
+                case 4:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/akronafterhours"];
+                    break;
+                case 5:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/akronafterhours"];
+                    break;
+                case 6:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvLCA"];
+                    break;
+                case 7:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlca"];
+                    break;
+                case 8:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/TheZTVSportsReport"];
+                    break;
+                case 9:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsports"];
+                    break;
+                case 10:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/GoofingOff"];
+                    break;
+                case 11:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ztvgoofingoff"];
+                    break;
+                case 12:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVLowdown"];
+                    break;
+                case 13:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlowdown"];
+                    break;
+                case 14:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
+                    break;
+                case 15:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/ztvundergradz"];
+                    break;
+                case 16:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/pages/ZTVs-300-Seconds-of-Science/1420366161604098?fref=ts"];
+                    break;
+                case 17:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/300SecOfScience"];
+                    break;
+                case 18:
+                    socialURL = [NSURL URLWithString:@"https://www.facebook.com/SportsPowerTalk"];
+                    break;
+                case 19:
+                    socialURL = [NSURL URLWithString:@"https://twitter.com/SportsPowerTalk"];
+                    break;
+                default:
+                    break;
+            }
+            break;
+            
+        default:
+            break;
+    }
+    [self instantiateSafariViewController:socialURL];
+}
+- (void)instantiateSafariViewController:(nonnull NSURL *)URL
+{
+    SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:URL];
+    safariViewController.delegate = self;
+    [self presentViewController:safariViewController animated:YES completion:nil];
+}
+- (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSURL *socialURL;
-    // The following code determines which social media link was selected and provides the proper URL to the destination view controller
-    if ([[segue destinationViewController] isKindOfClass:[FacebookViewController class]])
-    {
-        FacebookViewController *destination = [segue destinationViewController];
-        if ([segue.identifier isEqualToString:@"ztvFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"http://www.facebook.com/ZTVAkron"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV Facebook";
-        }
-        else if ([segue.identifier isEqualToString:@"ztvTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ZTVAkron"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV Twitter";
-        }
-        else if ([segue.identifier isEqualToString:@"wzipFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"http://www.facebook.com/wzipfm"];
-            destination.socialURL = socialURL;
-            destination.title = @"WZIP Facebook";
-        }
-        else if ([segue.identifier isEqualToString:@"wzipTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/WZIP"];
-            destination.socialURL = socialURL;
-            destination.title = @"WZIP Twitter";
-
-        }
-        else if ([segue.identifier isEqualToString:@"aahFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/akronafterhours"];
-            destination.socialURL = socialURL;
-            destination.title = @"Akron After Hours";
-        }
-        else if ([segue.identifier isEqualToString:@"aahTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/akronafterhours"];
-            destination.socialURL = socialURL;
-            destination.title = @"Akron After Hours";
-        }
-        else if ([segue.identifier isEqualToString:@"goofFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/GoofingOff"];
-            destination.socialURL = socialURL;
-            destination.title = @"Goofing Off!";
-        }
-        else if ([segue.identifier isEqualToString:@"goofTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvgoofingoff"];
-            destination.socialURL = socialURL;
-            destination.title = @"Goofing Off!";
-        }
-        else if ([segue.identifier isEqualToString:@"lcaFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvLCA"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lights, Camera, Akron!";
-        }
-        else if ([segue.identifier isEqualToString:@"lcaTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlca"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lights, Camera, Akron!";
-        }
-        else if ([segue.identifier isEqualToString:@"sportsFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/TheZTVSportsReport"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Report";
-        }
-        else if ([segue.identifier isEqualToString:@"sportsTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvsports"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Report";
-        }
-        else if ([segue.identifier isEqualToString:@"lowFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ZTVLowdown"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lowdown";
-        }
-        else if ([segue.identifier isEqualToString:@"lowTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvlowdown"];
-            destination.socialURL = socialURL;
-            destination.title = @"Lowdown";
-        }
-        else if ([segue.identifier isEqualToString:@"undergradzFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/ztvundergradz"];
-            destination.socialURL = socialURL;
-            destination.title = @"Undergradz";
-        }
-        else if ([segue.identifier isEqualToString:@"undergradzTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/ztvundergradz"];
-            destination.socialURL = socialURL;
-            destination.title = @"Undergradz";
-        }
-        else if ([segue.identifier isEqualToString:@"sptFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/SportsPowerTalk"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Power Talk";
-        }
-        else if ([segue.identifier isEqualToString:@"sptTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/SportsPowerTalk"];
-            destination.socialURL = socialURL;
-            destination.title = @"Sports Power Talk";
-        }
-        else if ([segue.identifier isEqualToString:@"scienceTwitter"])
-        {
-            socialURL = [NSURL URLWithString:@"https://twitter.com/300SecOfScience"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV's 300 Seconds of Science";
-        }
-        else if ([segue.identifier isEqualToString:@"scienceFacebook"])
-        {
-            socialURL = [NSURL URLWithString:@"https://www.facebook.com/pages/ZTVs-300-Seconds-of-Science/1420366161604098?fref=ts"];
-            destination.socialURL = socialURL;
-            destination.title = @"ZTV's 300 Seconds of Science";
-        }
-    }
-    /*else
-    {
-        UIStoryboard *instagramStoryboard = [UIStoryboard storyboardWithName:@"Instagram" bundle:[NSBundle mainBundle]];
-        [instagramStoryboard instantiateInitialViewController];
-    }*/
 }
 
 - (void)dealloc

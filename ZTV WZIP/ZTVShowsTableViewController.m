@@ -7,9 +7,9 @@
 //
 
 #import "ZTVShowsTableViewController.h"
-#import "ZTVYouTubeViewController.h"
+@import SafariServices;
 
-@interface ZTVShowsTableViewController ()
+@interface ZTVShowsTableViewController () <SFSafariViewControllerDelegate>
 
 @end
 
@@ -88,69 +88,71 @@
     return YES;
 }
 */
-
+- (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    NSURL *youtubeURL;
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVAkronAfterHours"];
+                    break;
+                case 1:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVLCA"];
+                    break;
+                case 2:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ZTVsports"];
+                    break;
+                case 3:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ztvgoofingoff"];
+                    break;
+                case 4:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/user/ztvlowdown"];
+                    break;
+                case 5:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
+                    break;
+                case 6:
+                    youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ"];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCPHbqRYdXcPFA9BocjQPusw"];
+                    break;
+                case 1:
+                    youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCzAPLA1iIWVkqaoEN2FbRJg"];
+                    break;
+                default:
+                    break;
+            }
+        default:
+            break;
+    }
+    [self instantiateSafariViewController:youtubeURL];
+}
+- (void)instantiateSafariViewController:(nonnull NSURL *)URL
+{
+    SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:URL];
+    safariViewController.delegate = self;
+    [self presentViewController:safariViewController animated:YES completion:nil];
+}
+- (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue destinationViewController] isKindOfClass:[ZTVYouTubeViewController class]])
-         {
-             ZTVYouTubeViewController *destination = [segue destinationViewController];
-             NSURL *youtubeURL;
-             // Identify which show was selected and pass the proper YouTube URL
-             if ([segue.identifier isEqualToString:@"akronAfterHours"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVAkronAfterHours"];
-                 destination.titleBar.topItem.title = @"Akron After Hours";
-             }
-             else if ([segue.identifier isEqualToString:@"goofingOff"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ztvgoofingoff"];
-                 destination.titleBar.topItem.title = @"Goofing Off!";
-             }
-             else if ([segue.identifier isEqualToString:@"lightsCameraAkron"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVLCA"];
-                 destination.titleBar.topItem.title = @"Lights, Camera, Akron!";
-             }
-             else if ([segue.identifier isEqualToString:@"sportsReport"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ZTVsports"];
-                 destination.titleBar.topItem.title = @"ZTV Sports Report";
-             }
-             else if ([segue.identifier isEqualToString:@"lowdown"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/user/ztvlowdown"];
-                 destination.titleBar.topItem.title = @"Lowdown";
-             }
-             else if ([segue.identifier isEqualToString:@"soChic"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCzAPLA1iIWVkqaoEN2FbRJg"];
-                 destination.titleBar.topItem.title = @"So Chic";
-             }
-             else if ([segue.identifier isEqualToString:@"theFeed"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://m.youtube.com/channel/UCPHbqRYdXcPFA9BocjQPusw"];
-                 destination.titleBar.topItem.title = @"ZTV The Feed";
-             }
-             else if ([segue.identifier isEqualToString:@"undergradz"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCi04rIb5XAL0pAjDTXKDzCA"];
-                 destination.titleBar.topItem.title = @"Undergradz";
-             }
-             else if ([segue.identifier isEqualToString:@"science"])
-             {
-                 youtubeURL = [NSURL URLWithString:@"https://www.youtube.com/channel/UCHxkqHJCd9to7lxFQlQpPeQ"];
-                 destination.titleBar.topItem.title = @"ZTV's 300 Seconds of Science";
-             }
-             else youtubeURL = nil;
-             // Send the proper URL Request to the destination view controller
-             NSURLRequest *youtubeRequest = [NSURLRequest requestWithURL:youtubeURL];
-             destination.youtubeURLRequest = youtubeRequest;
-         }
 }
 
 
