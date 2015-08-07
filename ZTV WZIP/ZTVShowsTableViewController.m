@@ -143,7 +143,7 @@
 }
 - (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // [self dismissViewControllerAnimated:YES completion:nil]; Unnecessary as of iOS 9.0 Beta 5.  Uncomment if view controller fails to dismiss
 }
 
 #pragma mark - Navigation
